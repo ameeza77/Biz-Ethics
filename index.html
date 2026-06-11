@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Ethics &amp; Etiquette — Interactive Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     GOOGLE ANALYTICS (optional)
+     Replace G-XXXXXXXXXX with your Measurement ID, then uncomment.
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+     ============================================================ -->
+
+<style>
+:root {
+  --bg: #0f1117;
+  --card: #1a1d27;
+  --card2: #21253a;
+  --gold: #f5c842;
+  --gold2: #e0a820;
+  --green: #4ade80;
+  --red: #f87171;
+  --blue: #60a5fa;
+  --purple: #c084fc;
+  --orange: #fb923c;
+  --teal: #2dd4bf;
+  --text: #e8eaf0;
+  --muted: #8891aa;
+  --border: #2e3248;
+  /* concept colours */
+  --ethics: #fb923c;     /* right & wrong  */
+  --etiquette: #60a5fa;  /* manners        */
+  --morality: #c084fc;   /* personal belief*/
+  --law: #f87171;        /* enforcement    */
+  --both: #4ade80;       /* both           */
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 18px; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+/* NAV */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15,17,23,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 10px;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.top-nav::-webkit-scrollbar { display: none; }
+.nav-btn {
+  flex-shrink: 0;
+  padding: 10px 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.nav-btn:hover, .nav-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+.hero, .section, .quiz-section, [id] { scroll-margin-top: 80px; }
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 48px 20px 36px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(245,200,66,0.08) 0%, transparent 70%);
+  border-bottom: 1px solid var(--border);
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.hero .sub-code {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 420px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+.hero-pills {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pill {
+  background: var(--card2);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.2s;
+}
+.pill:hover { background: var(--gold); color: #0f1117; border-color: var(--gold); }
+
+/* SECTIONS */
+.section { padding: 28px 16px; border-bottom: 1px solid var(--border); }
+.section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.section-num {
+  width: 38px; height: 38px;
+  background: var(--gold);
+  color: #0f1117;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 900; flex-shrink: 0;
+}
+.section-title { font-size: 1.3rem; font-weight: 900; color: var(--text); }
+.section-intro { font-size: 0.95rem; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+
+/* CARDS */
+.info-card {
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.info-card h3 { font-size: 1rem; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+.info-card p, .info-card li { font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+.info-card ul { padding-left: 18px; }
+.info-card strong { color: var(--text); }
+
+/* DEFINITION BANNER */
+.def-banner {
+  background: linear-gradient(135deg,#1a1a0a,#1a120a);
+  border: 1.5px solid #4a4020;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.def-banner .bulb { font-size: 1.8rem; margin-bottom: 6px; }
+.def-banner p { font-size: 0.95rem; color:#d8c886; line-height: 1.6; font-weight: 700; }
+
+/* IMPORTANCE / EXAMPLE LIST */
+.row-list { display: flex; flex-direction: column; gap: 8px; }
+.row-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px;
+}
+.row-item .r-icon { font-size: 1.15rem; flex-shrink: 0; }
+.row-item .r-body { font-size: 0.92rem; line-height: 1.55; }
+.row-item .r-body strong { color: var(--gold); display:block; margin-bottom:2px; font-size:0.95rem; }
+.row-item .r-eg { color: var(--muted); font-size: 0.85rem; font-style: italic; }
+
+/* EXPANDABLE CONCEPT CARDS (compare hub) */
+.concept-cards { display: flex; flex-direction: column; gap: 12px; }
+.concept-card {
+  border-radius: 16px; padding: 16px; border: 1.5px solid; cursor: pointer; transition: all 0.2s;
+}
+.concept-card .cc-top { display: flex; align-items: center; gap: 12px; }
+.concept-card .cc-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.concept-card .cc-title { font-size: 1.05rem; font-weight: 900; line-height: 1.1; }
+.concept-card .cc-hint { font-size: 0.8rem; font-weight: 600; opacity: 0.7; }
+.concept-card .cc-caret { margin-left: auto; font-size: 1rem; opacity: 0.6; transition: transform 0.3s; }
+.concept-card.open .cc-caret { transform: rotate(180deg); }
+.concept-card .cc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding-top 0.3s; }
+.concept-card.open .cc-body { max-height: 800px; padding-top: 14px; }
+.cc-body .cc-split { display: flex; gap: 10px; margin-bottom: 10px; }
+.cc-split > div { flex: 1; background: rgba(0,0,0,0.18); border-radius: 10px; padding: 10px; }
+.cc-split .cc-lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 800; margin-bottom: 4px; }
+.cc-split p { font-size: 0.82rem; line-height: 1.5; opacity: 0.9; }
+.cc-eg { font-size: 0.82rem; opacity: 0.7; font-style: italic; line-height: 1.5; }
+/* concept colour variants */
+.concept-card.ethics    { background:#1f1408; border-color:var(--ethics); }
+.concept-card.ethics    .cc-icon{background:#3a2410;} .concept-card.ethics .cc-title{color:var(--ethics);}
+.concept-card.etiquette { background:#0d1826; border-color:var(--etiquette); }
+.concept-card.etiquette .cc-icon{background:#142840;} .concept-card.etiquette .cc-title{color:var(--etiquette);}
+.concept-card.morality  { background:#1a0d1f; border-color:var(--morality); }
+.concept-card.morality  .cc-icon{background:#2a1a3a;} .concept-card.morality .cc-title{color:var(--morality);}
+.concept-card.law       { background:#1a0d0d; border-color:var(--law); }
+.concept-card.law       .cc-icon{background:#3a1a1a;} .concept-card.law .cc-title{color:var(--law);}
+.concept-card.both      { background:#0d1a0d; border-color:var(--both); }
+.concept-card.both      .cc-icon{background:#163a16;} .concept-card.both .cc-title{color:var(--both);}
+
+/* COMPARE TABLE */
+.cmp-table { width:100%; border-collapse: collapse; margin: 4px 0 12px; }
+.cmp-table th {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px;
+  font-weight: 800; padding: 9px 8px; text-align: left; border-bottom: 1px solid var(--border);
+}
+.cmp-table td { font-size: 0.88rem; padding: 10px 8px; border-bottom: 1px solid rgba(46,50,72,0.5); line-height:1.5; }
+.cmp-table tr:last-child td { border-bottom: none; }
+
+/* LEGAL vs ETHICAL interactive */
+.le-list { display:flex; flex-direction:column; gap:10px; }
+.le-row {
+  background: var(--card); border:1.5px solid var(--border); border-radius:14px;
+  padding:14px; cursor:pointer; transition: border-color 0.2s;
+}
+.le-row:hover { border-color: var(--gold2); }
+.le-q { font-size:0.92rem; font-weight:700; line-height:1.5; }
+.le-tap { font-size:0.72rem; color:var(--gold); font-weight:700; margin-top:6px; }
+.le-reveal { max-height:0; overflow:hidden; transition:max-height 0.4s ease, margin-top 0.3s; }
+.le-row.open .le-reveal { max-height:240px; margin-top:12px; }
+.le-row.open .le-tap { display:none; }
+.le-badges { display:flex; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.le-badge { font-size:0.72rem; font-weight:800; padding:4px 11px; border-radius:8px; }
+.le-badge.legal { background:rgba(96,165,250,0.15); color:var(--blue); border:1px solid var(--blue); }
+.le-badge.illegal { background:rgba(248,113,113,0.15); color:var(--red); border:1px solid var(--red); }
+.le-badge.ethical { background:rgba(74,222,128,0.15); color:var(--green); border:1px solid var(--green); }
+.le-badge.unethical { background:rgba(251,146,60,0.15); color:var(--ethics); border:1px solid var(--ethics); }
+.le-why { font-size:0.85rem; color:var(--muted); line-height:1.55; }
+
+/* SORTER (signature interactive) */
+.sorter-wrap {
+  background: var(--card); border:1.5px solid var(--border); border-radius:20px; padding:18px 16px;
+}
+.sorter-score {
+  display:flex; align-items:center; justify-content:space-between;
+  background: var(--card2); border-radius:12px; padding:12px 16px; margin-bottom:16px;
+}
+.sorter-score .ss-label { font-size:0.72rem; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+.sorter-score .ss-val { font-size:1.5rem; font-weight:900; color:var(--gold); }
+.sort-card {
+  background: var(--card2); border:1.5px solid var(--border); border-radius:14px;
+  padding:16px; margin-bottom:12px;
+}
+.sort-scenario { font-size:0.95rem; font-weight:700; line-height:1.5; margin-bottom:12px; }
+.sort-btns { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+.sort-btn {
+  background: var(--card); border:1.5px solid var(--border); border-radius:10px;
+  padding:11px 6px; font-family:'Nunito',sans-serif; font-size:0.82rem; font-weight:800;
+  color: var(--text); cursor:pointer; transition: all 0.2s;
+}
+.sort-btn:hover { border-color: var(--gold2); }
+.sort-btn.pick-ethics:hover { border-color: var(--ethics); }
+.sort-btn.pick-etiquette:hover { border-color: var(--etiquette); }
+.sort-btn.pick-both:hover { border-color: var(--both); }
+.sort-btn.correct { background:#0d1f0d; border-color:var(--green); color:var(--green); }
+.sort-btn.wrong { background:#1f0d0d; border-color:var(--red); color:var(--red); }
+.sort-btn.disabled { opacity:0.4; cursor:not-allowed; }
+.sort-fb {
+  margin-top:10px; font-size:0.82rem; line-height:1.55; padding:10px 12px;
+  border-radius:10px; display:none;
+}
+.sort-fb.show { display:block; }
+.sort-fb.correct { background:#0d1f0d; color:var(--green); }
+.sort-fb.wrong { background:#1f0d0d; color:var(--red); }
+.sorter-result {
+  background: var(--card2); border:2px solid var(--gold); border-radius:18px;
+  padding:24px 18px; text-align:center; display:none; margin-top:8px;
+}
+.sorter-result.show { display:block; }
+.sorter-result .sr-num { font-size:2.6rem; font-weight:900; color:var(--gold); }
+.sorter-result .sr-msg { font-size:0.92rem; font-weight:700; margin:8px 0 16px; }
+
+/* CASE STUDY reveal */
+.case-card {
+  background: linear-gradient(135deg,#181421,#1a1626);
+  border:1.5px solid var(--border); border-radius:18px; padding:18px;
+}
+.case-scenario { font-size:0.95rem; line-height:1.7; color:var(--text); margin-bottom:14px; }
+.case-scenario strong { color:var(--gold); }
+.reveal-btn {
+  width:100%; background: var(--gold); color:#0f1117; border:none;
+  padding:13px; border-radius:12px; font-family:'Nunito',sans-serif;
+  font-size:0.88rem; font-weight:800; cursor:pointer; transition: all 0.2s;
+}
+.reveal-btn:hover { background: var(--gold2); }
+.case-answer { max-height:0; overflow:hidden; transition:max-height 0.5s ease, margin-top 0.4s; }
+.case-answer.open { max-height:900px; margin-top:16px; }
+
+/* QUIZ */
+.quiz-section { padding: 28px 16px 40px; }
+.quiz-card { background: var(--card); border:1.5px solid var(--border); border-radius:16px; padding:20px; margin-bottom:16px; }
+.quiz-q-num { font-size:0.65rem; text-transform:uppercase; letter-spacing:1px; color:var(--gold); font-weight:700; margin-bottom:8px; }
+.quiz-q-text { font-size:1rem; font-weight:700; line-height:1.5; margin-bottom:14px; }
+.quiz-options { display:flex; flex-direction:column; gap:8px; }
+.quiz-opt {
+  background: var(--card2); border:1.5px solid var(--border); border-radius:10px;
+  padding:13px 16px; font-family:'Nunito',sans-serif; font-size:0.9rem; font-weight:600;
+  color: var(--text); cursor:pointer; text-align:left; transition: all 0.2s;
+}
+.quiz-opt:hover { border-color: var(--gold2); }
+.quiz-opt.correct { background:#0d1f0d; border-color:var(--green); color:var(--green); }
+.quiz-opt.wrong { background:#1f0d0d; border-color:var(--red); color:var(--red); }
+.quiz-opt.disabled { cursor:not-allowed; opacity:0.5; }
+.quiz-feedback { margin-top:10px; font-size:0.8rem; line-height:1.6; padding:10px 12px; border-radius:10px; display:none; }
+.quiz-feedback.show { display:block; }
+.quiz-feedback.correct { background:#0d1f0d; color:var(--green); }
+.quiz-feedback.wrong { background:#1f0d0d; color:var(--red); }
+.quiz-score-card { background: var(--card2); border:2px solid var(--gold); border-radius:20px; padding:28px 20px; text-align:center; display:none; }
+.quiz-score-card.show { display:block; }
+.score-num { font-size:3rem; font-weight:900; color:var(--gold); }
+.score-label { font-size:0.85rem; color:var(--muted); margin-bottom:12px; }
+.score-msg { font-size:0.9rem; font-weight:700; margin-bottom:16px; }
+.retry-btn { background:var(--gold); color:#0f1117; border:none; padding:12px 28px; border-radius:12px; font-family:'Nunito',sans-serif; font-size:0.85rem; font-weight:800; cursor:pointer; }
+
+/* TAKEAWAYS */
+.takeaway-list { display:flex; flex-direction:column; gap:8px; }
+.takeaway-item {
+  display:flex; gap:10px; align-items:flex-start; background:var(--card);
+  border:1px solid var(--border); border-radius:12px; padding:12px; font-size:0.86rem; line-height:1.6;
+}
+.takeaway-item .t-icon { color:var(--green); font-size:1rem; flex-shrink:0; margin-top:1px; }
+
+/* REMEMBER BOX */
+.remember-box { background: linear-gradient(135deg,#1a1a0a,#1a150a); border:1.5px solid #4a4020; border-radius:16px; padding:18px; margin-top:16px; text-align:center; }
+.remember-box .bulb { font-size:1.8rem; margin-bottom:8px; }
+.remember-box p { font-size:0.88rem; color:#c8b870; line-height:1.6; font-weight:600; }
+
+/* GLOSSARY */
+.gloss-item { background:var(--card); border:1.5px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:8px; cursor:pointer; transition:border-color 0.2s; }
+.gloss-item:hover { border-color: var(--gold2); }
+.gloss-term { display:flex; align-items:center; gap:10px; }
+.gloss-abbr { font-size:0.95rem; font-weight:900; color:var(--gold); }
+.gloss-caret { margin-left:auto; opacity:0.5; transition:transform 0.3s; }
+.gloss-item.open .gloss-caret { transform:rotate(180deg); }
+.gloss-body { max-height:0; overflow:hidden; transition:max-height 0.35s ease, margin-top 0.3s; }
+.gloss-item.open .gloss-body { max-height:200px; margin-top:10px; }
+.gloss-def { font-size:0.86rem; color:var(--muted); line-height:1.6; }
+
+/* PROGRESS BAR */
+.progress-bar-wrap { position: sticky; top: 40px; z-index: 99; background: var(--bg); border-bottom: 1px solid var(--border); padding: 6px 16px; }
+.progress-bar-label { display:flex; justify-content:space-between; align-items:center; margin-bottom:5px; font-size:0.68rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
+.progress-bar-label span { color: var(--gold); }
+.progress-track { height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
+.progress-fill { height:100%; background: linear-gradient(90deg, var(--green), var(--gold)); border-radius:3px; transition: width 0.5s ease; width:0%; }
+.progress-steps { display:none; gap:4px; margin-top:6px; flex-wrap:wrap; }
+.progress-steps.open { display:flex; }
+.prog-step { font-size:0.6rem; font-weight:700; padding:2px 7px; border-radius:6px; background:var(--card2); border:1px solid var(--border); color:var(--muted); transition:all 0.3s; white-space:nowrap; }
+.prog-step.done { background:rgba(74,222,128,0.15); border-color:var(--green); color:var(--green); }
+.prog-step.done::before { content: '✓ '; }
+
+/* ===== EMBEDDED ACTIVITY: PICK A BOX (scoped under .pbgame) ===== */
+:root{ --c1:#fb923c;--c2:#2dd4bf;--c3:#c084fc;--c4:#60a5fa;--c5:#f87171;--c6:#4ade80;--c7:#38bdf8;--c8:#f472b6;--c9:#facc15; }
+.pbgame .pb-intro{ background:var(--card); border:1.5px solid var(--border); border-radius:16px; padding:16px 18px; font-size:0.95rem; line-height:1.6; margin-bottom:14px; }
+.pbgame .pb-intro strong{ color:var(--gold); }
+.pbgame .pb-prog{ background:var(--card2); border:1.5px solid var(--border); border-radius:14px; padding:12px 16px; margin-bottom:16px; }
+.pbgame .pb-prog-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.pbgame .pb-prog-top .lbl{ font-size:0.8rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
+.pbgame .pb-prog-top .lbl b{ color:var(--gold); font-size:0.95rem; }
+.pbgame .pb-reset{ background:var(--card); border:1.5px solid var(--border); color:var(--muted); padding:6px 14px; border-radius:20px; font-family:'Nunito'; font-size:0.74rem; font-weight:800; cursor:pointer; transition:all 0.2s; }
+.pbgame .pb-reset:hover{ border-color:var(--c5); color:var(--c5); }
+.pbgame .pb-track{ height:8px; background:var(--border); border-radius:5px; overflow:hidden; }
+.pbgame .pb-fill{ height:100%; width:0%; border-radius:5px; background:linear-gradient(90deg,var(--c6),var(--gold),var(--c1)); transition:width 0.5s ease; }
+.pbgame .pb-cards{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(min-width:520px){ .pbgame .pb-cards{ grid-template-columns:1fr 1fr 1fr; } }
+.pbgame .pb-box{ position:relative; border-radius:18px; padding:16px 14px; border:2px solid; cursor:pointer; transition:transform 0.18s ease; overflow:hidden; min-height:128px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:8px; }
+.pbgame .pb-box:active{ transform:scale(0.95); }
+.pbgame .pb-box:hover{ transform:translateY(-4px); }
+.pbgame .pb-box .ico{ font-size:2.1rem; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+.pbgame .pb-box .bt{ font-size:0.82rem; font-weight:800; line-height:1.2; }
+.pbgame .pb-box .bnum{ position:absolute; top:8px; left:10px; font-size:0.7rem; font-weight:900; opacity:0.5; }
+.pbgame .pb-box .stamp{ position:absolute; top:7px; right:8px; font-size:1.1rem; opacity:0; transform:scale(0) rotate(-30deg); transition:all 0.35s cubic-bezier(.3,1.5,.5,1); }
+.pbgame .pb-box.done .stamp{ opacity:1; transform:scale(1) rotate(0); }
+.pbgame .pb-box.done::after{ content:''; position:absolute; inset:0; background:rgba(74,222,128,0.10); }
+.pbgame .pb-box.c1{ background:rgba(251,146,60,.12); border-color:var(--c1); } .pbgame .pb-box.c1 .bt,.pbgame .pb-box.c1 .bnum{ color:var(--c1); }
+.pbgame .pb-box.c2{ background:rgba(45,212,191,.12); border-color:var(--c2); } .pbgame .pb-box.c2 .bt,.pbgame .pb-box.c2 .bnum{ color:var(--c2); }
+.pbgame .pb-box.c3{ background:rgba(192,132,252,.12); border-color:var(--c3); } .pbgame .pb-box.c3 .bt,.pbgame .pb-box.c3 .bnum{ color:var(--c3); }
+.pbgame .pb-box.c4{ background:rgba(96,165,250,.12); border-color:var(--c4); } .pbgame .pb-box.c4 .bt,.pbgame .pb-box.c4 .bnum{ color:var(--c4); }
+.pbgame .pb-box.c5{ background:rgba(248,113,113,.12); border-color:var(--c5); } .pbgame .pb-box.c5 .bt,.pbgame .pb-box.c5 .bnum{ color:var(--c5); }
+.pbgame .pb-box.c6{ background:rgba(74,222,128,.12); border-color:var(--c6); } .pbgame .pb-box.c6 .bt,.pbgame .pb-box.c6 .bnum{ color:var(--c6); }
+.pbgame .pb-box.c7{ background:rgba(56,189,248,.12); border-color:var(--c7); } .pbgame .pb-box.c7 .bt,.pbgame .pb-box.c7 .bnum{ color:var(--c7); }
+.pbgame .pb-box.c8{ background:rgba(244,114,182,.12); border-color:var(--c8); } .pbgame .pb-box.c8 .bt,.pbgame .pb-box.c8 .bnum{ color:var(--c8); }
+.pbgame .pb-box.c9{ background:rgba(250,204,21,.12); border-color:var(--c9); } .pbgame .pb-box.c9 .bt,.pbgame .pb-box.c9 .bnum{ color:var(--c9); }
+/* modal */
+.pbgame .pb-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.78); z-index:200; align-items:flex-end; justify-content:center; }
+.pbgame .pb-overlay.open{ display:flex; }
+.pbgame .pb-sheet{ background:var(--card); border-radius:26px 26px 0 0; padding:22px 20px 32px; width:100%; max-width:480px; max-height:90vh; overflow-y:auto; animation:pbSlide .3s ease; border-top:4px solid var(--gold); }
+@keyframes pbSlide{ from{transform:translateY(100%);} to{transform:translateY(0);} }
+.pbgame .pb-handle{ width:42px; height:4px; background:var(--border); border-radius:2px; margin:0 auto 16px; }
+.pbgame .pb-head{ display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.pbgame .pb-ico-big{ width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.7rem; flex-shrink:0; }
+.pbgame .pb-title{ font-size:1.25rem; font-weight:900; line-height:1.1; }
+.pbgame .pb-tag{ font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; opacity:0.7; }
+.pbgame .pb-block{ border-radius:14px; padding:14px; margin-bottom:12px; }
+.pbgame .pb-block .blbl{ font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--gold); margin-bottom:6px; }
+.pbgame .pb-block.scn{ background:var(--card2); } .pbgame .pb-block.scn p{ font-size:0.95rem; line-height:1.6; }
+.pbgame .pb-block.task{ background:rgba(245,200,66,.08); border:1px solid rgba(245,200,66,.25); } .pbgame .pb-block.task p{ font-size:0.95rem; line-height:1.6; font-weight:700; }
+.pbgame .pb-answer{ width:100%; min-height:96px; background:var(--card2); border:1.5px solid var(--border); border-radius:14px; padding:13px; color:var(--text); font-family:'Nunito'; font-size:0.95rem; line-height:1.5; resize:vertical; outline:none; transition:border-color 0.2s; }
+.pbgame .pb-answer:focus{ border-color:var(--gold); }
+.pbgame .pb-answer::placeholder{ color:var(--muted); }
+.pbgame .pb-submit{ width:100%; margin-top:12px; background:var(--gold); color:#0f1117; border:none; padding:14px; border-radius:14px; font-family:'Nunito'; font-size:0.95rem; font-weight:900; cursor:pointer; }
+.pbgame .pb-submit:hover{ filter:brightness(1.08); }
+.pbgame .pb-fb{ display:none; margin-top:14px; }
+.pbgame .pb-fb.show{ display:block; animation:pbPop .4s ease; }
+@keyframes pbPop{ from{opacity:0; transform:translateY(10px) scale(.96);} to{opacity:1; transform:none;} }
+.pbgame .pb-badge{ display:flex; flex-direction:column; align-items:center; gap:6px; background:linear-gradient(135deg,#0d1f0d,#102910); border:2px solid var(--c6); border-radius:16px; padding:18px; text-align:center; margin-bottom:12px; }
+.pbgame .pb-badge .big{ font-size:2.4rem; animation:pbBounce .6s ease; }
+@keyframes pbBounce{ 0%{transform:scale(0) rotate(-20deg);} 60%{transform:scale(1.25) rotate(8deg);} 100%{transform:scale(1) rotate(0);} }
+.pbgame .pb-badge .gj{ font-size:1.1rem; font-weight:900; color:var(--c6); }
+.pbgame .pb-fbtext{ background:var(--card2); border-radius:14px; padding:14px; font-size:0.92rem; line-height:1.6; }
+.pbgame .pb-fbtext .flbl{ font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--c6); margin-bottom:5px; }
+.pbgame .pb-actions{ display:flex; gap:10px; margin-top:14px; }
+.pbgame .pb-act{ flex:1; padding:13px; border-radius:14px; font-family:'Nunito'; font-size:0.88rem; font-weight:800; cursor:pointer; border:1.5px solid var(--border); }
+.pbgame .pb-act.another{ background:var(--gold); color:#0f1117; border-color:var(--gold); }
+.pbgame .pb-act.close{ background:var(--card2); color:var(--text); }
+.pbgame .pb-celebrate{ display:none; margin:16px 0 0; }
+.pbgame .pb-celebrate.show{ display:block; animation:pbPop .5s ease; }
+.pbgame .pb-celebrate-card{ background:linear-gradient(135deg,#1a1a0a,#1f1408); border:2px solid var(--gold); border-radius:22px; padding:24px 20px; text-align:center; }
+.pbgame .pb-celebrate-card .party{ font-size:2.6rem; margin-bottom:8px; animation:pbBounce .7s ease; }
+.pbgame .pb-celebrate-card h3{ font-size:1.4rem; font-weight:900; color:var(--gold); margin-bottom:8px; }
+.pbgame .pb-celebrate-card p{ font-size:0.92rem; color:#d8c886; line-height:1.6; font-weight:600; }
+.pbgame .pb-reflect{ background:var(--card); border:1.5px solid var(--border); border-radius:18px; padding:18px; margin-top:16px; }
+.pbgame .pb-reflect .rhead{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.pbgame .pb-reflect h3{ font-size:1.05rem; font-weight:900; color:var(--gold); }
+.pbgame .pb-reflect .rq{ font-size:0.95rem; line-height:1.6; margin-bottom:12px; font-weight:700; }
+.pbgame .pb-saved{ display:none; margin-top:10px; font-size:0.85rem; color:var(--c6); font-weight:700; text-align:center; }
+.pbgame .pb-saved.show{ display:block; }
+.pbgame .pb-box .bhint{ font-size:0.62rem; font-weight:700; opacity:0.55; }
+.pbgame .pb-discuss{ background:rgba(96,165,250,.08); border:1px solid rgba(96,165,250,.3); border-radius:14px; padding:14px; margin-bottom:12px; }
+.pbgame .pb-discuss .pd-head{ font-size:0.85rem; font-weight:900; color:var(--c4); margin-bottom:6px; }
+.pbgame .pb-discuss .pd-prompt{ font-size:0.92rem; line-height:1.55; margin-bottom:10px; }
+.pbgame .pd-timer{ background:var(--c4); color:#0f1117; border:none; padding:9px 16px; border-radius:20px; font-family:'Nunito'; font-size:0.82rem; font-weight:800; cursor:pointer; transition:all 0.2s; }
+.pbgame .pd-timer.running{ background:var(--card); color:var(--c4); border:1.5px solid var(--c4); }
+.pbgame .pd-timer.done{ background:var(--c5); color:#0f1117; }
+.pbgame .pb-concept{ margin-top:12px; background:linear-gradient(135deg,#1a1407,#1f1408); border:1.5px solid var(--gold); border-radius:14px; padding:16px; text-align:center; animation:pbPop .5s ease; }
+.pbgame .pb-concept .flbl{ font-size:0.68rem; font-weight:800; text-transform:uppercase; letter-spacing:1px; color:var(--gold); margin-bottom:5px; }
+.pbgame .pb-concept .pc-name{ font-size:1.25rem; font-weight:900; color:var(--gold); margin:4px 0 6px; }
+.pbgame .pb-concept .pc-sub{ font-size:0.82rem; color:var(--muted); line-height:1.5; }
+#pb-confetti{ position:fixed; inset:0; pointer-events:none; z-index:300; overflow:hidden; }
+#pb-confetti .conf{ position:absolute; animation:pbFall linear forwards; }
+@keyframes pbFall{ to{ transform:translateY(110vh) rotate(720deg); opacity:0; } }
+
+/* ===== EMBEDDED ACTIVITY: DRAG & DROP SORTER (scoped under .dgame) ===== */
+.dgame .dg-intro{ background:var(--card); border:1.5px solid var(--border); border-radius:16px; padding:16px 18px; font-size:0.95rem; line-height:1.6; margin-bottom:14px; }
+.dgame .dg-intro strong{ color:var(--gold); }
+.dgame .dg-scorebar{ background:var(--card2); border:1.5px solid var(--border); border-radius:14px; padding:12px 16px; margin-bottom:12px; }
+.dgame .dg-score-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.dgame .dg-score-top .lbl{ font-size:0.8rem; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
+.dgame .dg-score-top .lbl b{ color:var(--gold); font-size:0.95rem; }
+.dgame .dg-reset{ background:var(--card); border:1.5px solid var(--border); color:var(--muted); padding:6px 14px; border-radius:20px; font-family:'Nunito'; font-size:0.74rem; font-weight:800; cursor:pointer; transition:all 0.2s; }
+.dgame .dg-reset:hover{ border-color:var(--c5); color:var(--c5); }
+.dgame .dg-track{ height:8px; background:var(--border); border-radius:5px; overflow:hidden; }
+.dgame .dg-fill{ height:100%; width:0%; border-radius:5px; background:linear-gradient(90deg,var(--c6),var(--gold),var(--c1)); transition:width 0.4s ease; }
+.dgame .dg-feedback{ text-align:center; font-size:0.9rem; font-weight:800; min-height:22px; margin-bottom:10px; transition:all 0.2s; }
+.dgame .dg-feedback.ok{ color:var(--c6); }
+.dgame .dg-feedback.no{ color:var(--c5); }
+.dgame .dg-hint{ font-size:0.78rem; color:var(--muted); text-align:center; margin-bottom:8px; }
+/* tray */
+.dgame .dg-tray{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; background:rgba(255,255,255,0.02); border:1.5px dashed var(--border); border-radius:16px; padding:14px; min-height:70px; margin-bottom:16px; }
+.dgame .dg-tray-empty{ font-size:0.82rem; color:var(--muted); align-self:center; }
+/* card chip */
+.dgame .dg-card{ display:inline-flex; align-items:center; gap:7px; background:var(--card2); border:1.5px solid var(--border); border-radius:24px; padding:10px 15px; font-size:0.85rem; font-weight:800; color:var(--text); cursor:grab; user-select:none; transition:transform 0.12s, border-color 0.2s, box-shadow 0.2s; touch-action:manipulation; }
+.dgame .dg-card:active{ cursor:grabbing; transform:scale(0.96); }
+.dgame .dg-card .cico{ font-size:1rem; }
+.dgame .dg-card.selected{ border-color:var(--gold); box-shadow:0 0 0 3px rgba(245,200,66,0.25); transform:translateY(-2px); }
+.dgame .dg-card.placed{ cursor:default; border-color:var(--c6); background:rgba(74,222,128,0.12); color:var(--c6); }
+/* boxes */
+.dgame .dg-boxes{ display:flex; flex-direction:column; gap:14px; }
+@media(min-width:600px){ .dgame .dg-boxes{ flex-direction:row; } .dgame .dg-box{ flex:1; } }
+.dgame .dg-box{ border-radius:18px; border:2px solid; padding:14px; transition:all 0.2s; }
+.dgame .dg-box.biz{ background:rgba(251,146,60,0.07); border-color:var(--c1); }
+.dgame .dg-box.org{ background:rgba(45,212,191,0.07); border-color:var(--c2); }
+.dgame .dg-box.over{ box-shadow:0 0 0 4px rgba(245,200,66,0.3); transform:translateY(-2px); }
+.dgame .dg-box.shake{ animation:dgShake 0.4s; }
+.dgame .dg-box.armed{ border-style:dashed; animation:dgPulse 1.1s ease-in-out infinite; cursor:pointer; }
+@keyframes dgPulse{ 0%,100%{ box-shadow:0 0 0 3px rgba(245,200,66,0.18); } 50%{ box-shadow:0 0 0 6px rgba(245,200,66,0.42); } }
+.dgame .dg-arm{ display:none; font-size:0.74rem; font-weight:900; color:var(--gold); margin-bottom:8px; text-align:center; }
+.dgame .dg-box.armed .dg-arm{ display:block; }
+.dgame .dg-selbanner{ display:none; background:linear-gradient(135deg,#1f1408,#2a1a08); border:1.5px solid var(--gold); border-radius:14px; padding:12px 14px; margin-bottom:12px; text-align:center; font-size:0.92rem; font-weight:800; color:var(--gold); animation:pbPop .3s ease; }
+.dgame .dg-selbanner.show{ display:block; }
+.dgame .dg-selbanner .clr{ display:inline-block; margin-left:8px; font-size:0.74rem; color:var(--muted); text-decoration:underline; cursor:pointer; }
+@keyframes dgShake{ 0%,100%{transform:translateX(0);} 25%{transform:translateX(-7px);} 75%{transform:translateX(7px);} }
+.dgame .dg-box-head{ display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; }
+.dgame .dg-box-ico{ font-size:1.6rem; flex-shrink:0; }
+.dgame .dg-box.biz .dg-box-title{ color:var(--c1); }
+.dgame .dg-box.org .dg-box-title{ color:var(--c2); }
+.dgame .dg-box-title{ font-size:1rem; font-weight:900; line-height:1.2; }
+.dgame .dg-box-desc{ font-size:0.72rem; color:var(--muted); line-height:1.4; margin-top:2px; }
+.dgame .dg-drop{ display:flex; flex-wrap:wrap; gap:7px; min-height:60px; background:rgba(0,0,0,0.18); border-radius:12px; padding:10px; align-content:flex-start; }
+.dgame .dg-drop-empty{ font-size:0.74rem; color:var(--muted); opacity:0.7; align-self:center; margin:0 auto; }
+/* celebrate + reflect */
+.dgame .dg-celebrate{ display:none; margin-top:16px; }
+.dgame .dg-celebrate.show{ display:block; animation:pbPop .5s ease; }
+.dgame .dg-celebrate-card{ background:linear-gradient(135deg,#1a1a0a,#1f1408); border:2px solid var(--gold); border-radius:22px; padding:24px 20px; text-align:center; }
+.dgame .dg-celebrate-card .party{ font-size:2.6rem; margin-bottom:8px; animation:pbBounce .7s ease; }
+.dgame .dg-celebrate-card h3{ font-size:1.35rem; font-weight:900; color:var(--gold); margin-bottom:8px; }
+.dgame .dg-celebrate-card p{ font-size:0.92rem; color:#d8c886; line-height:1.6; font-weight:600; }
+.dgame .dg-reflect{ background:var(--card); border:1.5px solid var(--border); border-radius:18px; padding:18px; margin-top:16px; }
+.dgame .dg-reflect .rhead{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.dgame .dg-reflect h3{ font-size:1.05rem; font-weight:900; color:var(--gold); }
+.dgame .dg-reflect .rq{ font-size:0.95rem; line-height:1.6; margin-bottom:12px; font-weight:700; }
+.dgame .dg-answer{ width:100%; min-height:80px; background:var(--card2); border:1.5px solid var(--border); border-radius:14px; padding:13px; color:var(--text); font-family:'Nunito'; font-size:0.95rem; line-height:1.5; resize:vertical; outline:none; transition:border-color 0.2s; }
+.dgame .dg-answer:focus{ border-color:var(--gold); }
+.dgame .dg-answer::placeholder{ color:var(--muted); }
+.dgame .dg-saved{ display:none; margin-top:10px; font-size:0.85rem; color:var(--c6); font-weight:700; text-align:center; }
+.dgame .dg-saved.show{ display:block; }
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<div class="top-nav">
+  <button class="nav-btn active" onclick="goTo('hero')">🏠 Home</button>
+  <button class="nav-btn" onclick="goTo('s0-lo')">🎯 Outcomes</button>
+  <button class="nav-btn" onclick="goTo('s0-time')">⏱️ Time</button>
+  <button class="nav-btn" onclick="goTo('s0-pathway')">🗺️ How to Use</button>
+  <button class="nav-btn" onclick="goTo('s1')">📖 What is Ethics</button>
+  <button class="nav-btn" onclick="goTo('s-box')">🧩 Pick a Box</button>
+  <button class="nav-btn" onclick="goTo('s2')">⭐ Why It Matters</button>
+  <button class="nav-btn" onclick="goTo('s3')">💼 Business Ethics</button>
+  <button class="nav-btn" onclick="goTo('s4')">🏢 Org Ethics</button>
+  <button class="nav-btn" onclick="goTo('s-drag')">🧲 Sort It</button>
+  <button class="nav-btn" onclick="goTo('s5')">⚖️ Compare</button>
+  <button class="nav-btn" onclick="goTo('s6')">📜 Codes</button>
+  <button class="nav-btn" onclick="goTo('s7')">🕌 Religion</button>
+  <button class="nav-btn" onclick="goTo('s8')">✅❌ Behaviour</button>
+  <button class="nav-btn" onclick="goTo('s9')">🤝 Professionalism</button>
+  <button class="nav-btn" onclick="goTo('s-sorter')">🧩 Sorter</button>
+  <button class="nav-btn" onclick="goTo('s-case')">☕ Case Study</button>
+  <button class="nav-btn" onclick="goTo('s-quiz')">🧠 Quiz</button>
+  <button class="nav-btn" onclick="goTo('s-evidence')">📸 Evidence</button>
+  <button class="nav-btn" onclick="goTo('s-glossary')">📚 Glossary</button>
+  <button class="nav-btn" onclick="goTo('s-references')">📑 References</button>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar-wrap" id="progress-wrap">
+  <div class="progress-bar-label" onclick="document.getElementById('prog-steps').classList.toggle('open')" style="cursor:pointer;">
+    <span id="prog-count">0 / 8 sections visited</span>
+    <span style="color:var(--muted);">tap to expand ▾</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+  <div class="progress-steps" id="prog-steps">
+    <div class="prog-step" id="prog-s1">📖 What is Ethics</div>
+    <div class="prog-step" id="prog-s2">⭐ Why It Matters</div>
+    <div class="prog-step" id="prog-s3">💼 Business Ethics</div>
+    <div class="prog-step" id="prog-s5">⚖️ Compare</div>
+    <div class="prog-step" id="prog-s6">📜 Codes</div>
+    <div class="prog-step" id="prog-s8">✅❌ Behaviour</div>
+    <div class="prog-step" id="prog-s-sorter">🧩 Sorter</div>
+    <div class="prog-step" id="prog-s-quiz">🧠 Quiz</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <div class="hero-badge">Interactive Self-Instructional Material (SIM)</div>
+  <h1>Business Ethics<br>&amp; Etiquette</h1>
+  <div class="sub-code">DBM3113 · CHAPTER 1: ETHICS</div>
+  <p>Learn what is right, fair, honest and professional in the workplace — explore it interactively.</p>
+  <div class="hero-pills">
+    <button class="pill" onclick="goTo('s5')">⚖️ Compare</button>
+    <button class="pill" onclick="goTo('s-sorter')">🧩 Sorter Activity</button>
+    <button class="pill" onclick="goTo('s-case')">☕ Case Study</button>
+    <button class="pill" onclick="goTo('s-quiz')">🧠 Quiz</button>
+  </div>
+</div>
+
+<!-- MQA: LEARNING OUTCOMES -->
+<div id="s0-lo" style="background: linear-gradient(135deg,#0d1a0d,#0f1f12); border-top: 3px solid var(--green); border-bottom: 1px solid var(--border); padding: 24px 16px;">
+  <div style="max-width:560px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+      <div style="background:var(--green); color:#0f1117; border-radius:10px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">🎯</div>
+      <div>
+        <div style="font-size:1.1rem; font-weight:900; color:var(--green);">Learning Outcomes</div>
+        <div style="font-size:0.72rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:1px;">By the end of this lesson, students should be able to:</div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; gap:10px; align-items:flex-start; background:rgba(74,222,128,0.06); border:1px solid rgba(74,222,128,0.2); border-radius:12px; padding:12px;">
+        <span style="color:var(--green); font-weight:900; flex-shrink:0;">CLO 1</span>
+        <span style="font-size:0.9rem; line-height:1.6;"><strong>Describe</strong> the meaning of ethics, business ethics and organizational ethics in the workplace</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:flex-start; background:rgba(74,222,128,0.06); border:1px solid rgba(74,222,128,0.2); border-radius:12px; padding:12px;">
+        <span style="color:var(--green); font-weight:900; flex-shrink:0;">CLO 2</span>
+        <span style="font-size:0.9rem; line-height:1.6;"><strong>Differentiate</strong> ethics from morality, etiquette, law and religion</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:flex-start; background:rgba(74,222,128,0.06); border:1px solid rgba(74,222,128,0.2); border-radius:12px; padding:12px;">
+        <span style="color:var(--green); font-weight:900; flex-shrink:0;">CLO 3</span>
+        <span style="font-size:0.9rem; line-height:1.6;"><strong>Explain</strong> the purpose and common elements of professional codes of conduct</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:flex-start; background:rgba(74,222,128,0.06); border:1px solid rgba(74,222,128,0.2); border-radius:12px; padding:12px;">
+        <span style="color:var(--green); font-weight:900; flex-shrink:0;">CLO 4</span>
+        <span style="font-size:0.9rem; line-height:1.6;"><strong>Classify</strong> workplace situations as ethical, etiquette or both, and recommend the right action</span>
+      </div>
+    </div>
+
+    <!-- ESTIMATED TIME -->
+    <div id="s0-time" style="scroll-margin-top:80px; margin-top:14px; background:var(--card2); border:1.5px solid var(--border); border-radius:12px; padding:16px;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:14px;">
+        <span style="font-size:1.2rem;">⏱️</span>
+        <span style="font-size:0.75rem; color:var(--gold); font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">Estimated Learning Time</span>
+        <span style="margin-left:auto; background:var(--gold); color:#0f1117; font-size:0.72rem; font-weight:900; padding:3px 10px; border-radius:20px;">90 min total</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:7px;">
+        <div style="display:flex; align-items:center; gap:10px; background:var(--card); border-radius:10px; padding:10px 12px;">
+          <span style="font-size:1rem; flex-shrink:0;">📖</span>
+          <span style="font-size:0.85rem; flex:1;">Read core notes <span style="color:var(--muted); font-size:0.78rem;">(Sections 1–9, incl. tap-to-expand compare cards)</span></span>
+          <span style="color:var(--green); font-weight:800; font-size:0.85rem; flex-shrink:0;">35 min</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; background:var(--card); border-radius:10px; padding:10px 12px;">
+          <span style="font-size:1rem; flex-shrink:0;">🧩</span>
+          <span style="font-size:0.85rem; flex:1;">Ethics or Etiquette? sorter <span style="color:var(--muted); font-size:0.78rem;">(classify 8 real scenarios)</span></span>
+          <span style="color:var(--green); font-weight:800; font-size:0.85rem; flex-shrink:0;">20 min</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; background:var(--card); border-radius:10px; padding:10px 12px;">
+          <span style="font-size:1rem; flex-shrink:0;">☕</span>
+          <span style="font-size:0.85rem; flex:1;">Case study <span style="color:var(--muted); font-size:0.78rem;">(The Customer Complaint — reveal &amp; reflect)</span></span>
+          <span style="color:var(--green); font-weight:800; font-size:0.85rem; flex-shrink:0;">15 min</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; background:var(--card); border-radius:10px; padding:10px 12px;">
+          <span style="font-size:1rem; flex-shrink:0;">🧠</span>
+          <span style="font-size:0.85rem; flex:1;">Complete the quiz <span style="color:var(--muted); font-size:0.78rem;">(6 questions with explanations)</span></span>
+          <span style="color:var(--green); font-weight:800; font-size:0.85rem; flex-shrink:0;">20 min</span>
+        </div>
+      </div>
+      <div style="margin-top:10px; text-align:right; font-size:0.7rem; color:var(--muted); font-style:italic;">⚡ Self-paced — take your time, no timer running</div>
+    </div>
+  </div>
+</div>
+
+<!-- MQA: LEARNING PATHWAY -->
+<div id="s0-pathway" style="background: linear-gradient(135deg,#10101a,#131628); border-bottom: 1px solid var(--border); padding: 24px 16px;">
+  <div style="max-width:560px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+      <div style="background:var(--gold); color:#0f1117; border-radius:10px; width:38px; height:38px; display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">🗺️</div>
+      <div>
+        <div style="font-size:1.1rem; font-weight:900; color:var(--gold);">How to Use This Lesson</div>
+        <div style="font-size:0.72rem; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Student Learning Pathway</div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px;">
+        <div style="background:var(--gold); color:#0f1117; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:900; flex-shrink:0;">1</div>
+        <div style="font-size:0.9rem; line-height:1.6;"><strong style="color:var(--gold);">Read</strong> what ethics is and why it matters in business (Sections 1–4)</div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px;">
+        <div style="background:var(--gold); color:#0f1117; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:900; flex-shrink:0;">2</div>
+        <div style="font-size:0.9rem; line-height:1.6;"><strong style="color:var(--gold);">Tap to expand</strong> the Compare cards — ethics vs morality, etiquette, law &amp; religion (Section 5)</div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px;">
+        <div style="background:var(--gold); color:#0f1117; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:900; flex-shrink:0;">3</div>
+        <div style="font-size:0.9rem; line-height:1.6;"><strong style="color:var(--gold);">Play</strong> the Ethics or Etiquette? sorter — classify real workplace scenarios</div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px;">
+        <div style="background:var(--gold); color:#0f1117; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:900; flex-shrink:0;">4</div>
+        <div style="font-size:0.9rem; line-height:1.6;"><strong style="color:var(--gold);">Work through</strong> the Customer Complaint case study, then take the Quiz</div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px;">
+        <div style="background:var(--gold); color:#0f1117; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; font-weight:900; flex-shrink:0;">5</div>
+        <div style="font-size:0.9rem; line-height:1.6;"><strong style="color:var(--gold);">Screenshot</strong> your sorter result and quiz score, then submit in LMS as your evidence</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S1: WHAT IS ETHICS -->
+<div class="section" id="s1">
+  <div class="section-header"><div class="section-num">1</div><div class="section-title">What is Ethics?</div></div>
+  <div class="info-card">
+    <h3>Definition</h3>
+    <p>Ethics is the study of what is <strong style="color:var(--ethics)">right or wrong</strong>, <strong style="color:var(--ethics)">good or bad</strong>, and <strong style="color:var(--ethics)">acceptable or unacceptable</strong> in human behaviour. It is a set of moral principles that guides how we should behave.</p>
+  </div>
+  <div class="def-banner">
+    <div class="bulb">💡</div>
+    <p>Ethics means knowing and choosing what is<br><strong>right, fair, honest and responsible.</strong></p>
+  </div>
+  <div class="info-card">
+    <h3>In the workplace</h3>
+    <p>Ethics guides employees and employers to behave responsibly, honestly, fairly and professionally when dealing with customers, colleagues, managers, suppliers, competitors and society.</p>
+    <p style="margin-top:8px;"><strong>Example:</strong> An employee finds confidential salary information on a shared computer. Even though they <em>can</em> open the file, the ethical action is <strong style="color:var(--gold)">not</strong> to read, copy or share it — out of respect for privacy and confidentiality.</p>
+  </div>
+  <div class="info-card">
+    <h3>Questions ethics helps us ask</h3>
+    <ul>
+      <li>Is this action <strong>right or wrong</strong>?</li>
+      <li>Is this action <strong>fair</strong> to everyone affected?</li>
+      <li>Is this action <strong>honest</strong> — is anyone being misled?</li>
+      <li><strong>Who</strong> will be affected by this decision?</li>
+      <li>Can I <strong>justify</strong> and explain why this decision is acceptable?</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== EMBEDDED ACTIVITY: PICK A BOX (after 1.0) ===== -->
+<div class="pbgame">
+<div class="section" id="s-box" style="background:radial-gradient(ellipse at 50% 0%, rgba(245,200,66,0.06) 0%, transparent 60%);">
+  <div class="section-header"><div class="section-num">🧩</div><div class="section-title">Activity: Pick a Box Challenge</div></div>
+  <div class="pb-intro">
+    🔮 <strong>Ethics in Action — Mystery Challenges!</strong> Pick a challenge card, read the workplace situation, <strong>discuss with your partner for 2 minutes</strong>, then type your pair answer. After you submit, the hidden <strong>ethics concept</strong> behind the card is revealed! 👥 Complete at least <strong>3 challenges</strong> to finish.
+  </div>
+
+  <div class="pb-prog">
+    <div class="pb-prog-top">
+      <div class="lbl">Boxes completed: <b id="pb-count">0/9</b></div>
+      <button class="pb-reset" onclick="pbReset()">↻ Reset</button>
+    </div>
+    <div class="pb-track"><div class="pb-fill" id="pb-fill"></div></div>
+  </div>
+
+  <div class="pb-cards" id="pb-cards"></div>
+
+  <div class="pb-celebrate" id="pb-celebrate">
+    <div class="pb-celebrate-card">
+      <div class="party">🎉</div>
+      <h3>Congratulations!</h3>
+      <p>You have completed the <strong>Ethics in Action Challenge</strong>. Explore the other boxes too, then answer the reflection below 👇</p>
+    </div>
+  </div>
+
+  <div class="pb-reflect">
+    <div class="rhead"><span style="font-size:1.5rem;">💭</span><h3>Final Reflection</h3></div>
+    <div class="rq">Which ethics concept is most important in your future workplace? Explain briefly.</div>
+    <textarea class="pb-answer" id="pb-reflect-input" placeholder="Type your reflection here..." oninput="pbSaveReflection()"></textarea>
+    <div class="pb-saved" id="pb-saved">✅ Saved — screenshot this for your submission</div>
+  </div>
+</div>
+
+<!-- pick-a-box modal + confetti -->
+<div class="pb-overlay" id="pb-overlay" onclick="if(event.target===this)pbClose()">
+  <div class="pb-sheet" id="pb-sheet"></div>
+</div>
+<div id="pb-confetti"></div>
+</div>
+<!-- ===== END PICK A BOX ===== -->
+
+<!-- S2: WHY IT MATTERS -->
+<div class="section" id="s2">
+  <div class="section-header"><div class="section-num">2</div><div class="section-title">Why Ethics Matters in Business</div></div>
+  <p class="section-intro">A business cannot survive by focusing on profit alone. It must also build trust and act responsibly, because every decision affects people, reputation and long-term success.</p>
+  <div class="row-list">
+    <div class="row-item"><span class="r-icon">🤝</span><div class="r-body"><strong>Builds trust</strong>Customers trust businesses that are honest and responsible.<span class="r-eg">e.g. a company clearly states its product ingredients</span></div></div>
+    <div class="row-item"><span class="r-icon">🛡️</span><div class="r-body"><strong>Protects reputation</strong>Ethical behaviour helps a company keep a good name.<span class="r-eg">e.g. a company admits mistakes and solves complaints</span></div></div>
+    <div class="row-item"><span class="r-icon">🧭</span><div class="r-body"><strong>Guides decision-making</strong>Ethics helps managers choose the right action.<span class="r-eg">e.g. a manager refuses to accept a bribe from a supplier</span></div></div>
+    <div class="row-item"><span class="r-icon">🚫</span><div class="r-body"><strong>Prevents misconduct</strong>Reduces cheating, fraud and abuse of power.<span class="r-eg">e.g. employees follow the rules on claims and expenses</span></div></div>
+    <div class="row-item"><span class="r-icon">🌱</span><div class="r-body"><strong>Improves workplace culture</strong>Creates respect and fairness among staff.<span class="r-eg">e.g. colleagues treat each other professionally</span></div></div>
+    <div class="row-item"><span class="r-icon">📈</span><div class="r-body"><strong>Supports long-term success</strong>Ethical companies keep loyal customers and employees.<span class="r-eg">e.g. customers keep buying from a trusted brand</span></div></div>
+  </div>
+</div>
+
+<!-- S3: BUSINESS ETHICS -->
+<div class="section" id="s3">
+  <div class="section-header"><div class="section-num">3</div><div class="section-title">Business Ethics</div></div>
+  <div class="def-banner">
+    <div class="bulb">💼</div>
+    <p>Business ethics = moral principles and standards that guide behaviour in business activities — doing the right thing <strong>even when no one is watching.</strong></p>
+  </div>
+  <p class="section-intro">It applies to how a business treats its customers, employees, competitors, suppliers, community and environment. It is not only about following rules.</p>
+  <div class="info-card">
+    <h3>Examples of business ethics</h3>
+    <table class="cmp-table">
+      <tr><th>Situation</th><th>Ethical behaviour</th></tr>
+      <tr><td>Selling products</td><td>Give accurate information to customers</td></tr>
+      <tr><td>Advertising</td><td>Do not make false claims</td></tr>
+      <tr><td>Customer service</td><td>Handle complaints politely and fairly</td></tr>
+      <tr><td>Pricing</td><td>Avoid cheating or hidden charges</td></tr>
+      <tr><td>Employee treatment</td><td>Treat employees equally and respectfully</td></tr>
+      <tr><td>Competition</td><td>Do not spread false information about rivals</td></tr>
+      <tr><td>Company resources</td><td>Do not misuse office property for personal gain</td></tr>
+    </table>
+  </div>
+  <div class="remember-box">
+    <div class="bulb">🧴</div>
+    <p>A skincare company knows its product may cause irritation for some users. Hiding this may boost short-term sales — but it is <strong>unethical</strong> because customers can be harmed or misled.</p>
+  </div>
+</div>
+
+<!-- S4: ORGANIZATIONAL ETHICS -->
+<div class="section" id="s4">
+  <div class="section-header"><div class="section-num">4</div><div class="section-title">Organizational Ethics</div></div>
+  <p class="section-intro">Organizational ethics refers to the ethical values, rules, practices and culture <strong>inside</strong> an organisation — how it expects its members to behave.</p>
+  <div class="info-card">
+    <h3>Where you can see it</h3>
+    <table class="cmp-table">
+      <tr><th>Area</th><th>Example</th></tr>
+      <tr><td>Company policy</td><td>Anti-bribery policy</td></tr>
+      <tr><td>Leadership behaviour</td><td>Managers act honestly and fairly</td></tr>
+      <tr><td>Workplace culture</td><td>Employees respect one another</td></tr>
+      <tr><td>Decision-making</td><td>The company considers customer safety, not only profit</td></tr>
+      <tr><td>Code of conduct</td><td>Rules on confidentiality, conflict of interest &amp; conduct</td></tr>
+    </table>
+  </div>
+  <div class="concept-cards">
+    <div class="concept-card both" onclick="toggleConcept(this)">
+      <div class="cc-top">
+        <div class="cc-icon">🏢</div>
+        <div><div class="cc-title">Business vs Organizational Ethics</div><div class="cc-hint">tap to compare</div></div>
+        <div class="cc-caret">▾</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-split">
+          <div><div class="cc-lbl" style="color:var(--ethics)">Business Ethics</div><p>Ethical behaviour in business <em>activities</em> — involving customers, competitors, suppliers and society. <br><br><em>e.g. honest advertising</em></p></div>
+          <div><div class="cc-lbl" style="color:var(--both)">Organizational Ethics</div><p>Ethical values &amp; behaviour <em>inside</em> the organisation — involving employees, managers and internal culture. <br><br><em>e.g. a fair promotion policy</em></p></div>
+        </div>
+        <div class="cc-eg">⚠️ A business may <em>say</em> it values honesty — but if managers encourage staff to hide customer complaints, it does not actually practise strong organizational ethics.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EMBEDDED ACTIVITY: DRAG & DROP SORTER (after 1.4) ===== -->
+<div class="dgame">
+<div class="section" id="s-drag" style="background:radial-gradient(ellipse at 50% 0%, rgba(45,212,191,0.06) 0%, transparent 60%);">
+  <div class="section-header"><div class="section-num">🧲</div><div class="section-title">Activity: Inside or Outside the Organisation?</div></div>
+  <div class="dg-intro">
+    👥 <strong>Work with your partner.</strong> Drag each item into the correct box — or <strong>tap an item, then tap a box</strong> on mobile. Ask yourselves: is it about how the business behaves with <strong>outside stakeholders</strong>, or how people behave <strong>inside the organisation</strong>?
+  </div>
+
+  <div class="dg-scorebar">
+    <div class="dg-score-top">
+      <div class="lbl">Sorted: <b id="dg-count">0/20</b></div>
+      <button class="dg-reset" onclick="dgReset()">↻ Reset</button>
+    </div>
+    <div class="dg-track"><div class="dg-fill" id="dg-fill"></div></div>
+  </div>
+
+  <div class="dg-feedback" id="dg-feedback">Pick an item to begin 👇</div>
+  <div class="dg-hint">💡 Tip: tap an item to select it, then tap the correct box.</div>
+
+  <div class="dg-tray" id="dg-tray"></div>
+
+  <div class="dg-selbanner" id="dg-selbanner"></div>
+
+  <div class="dg-boxes">
+    <div class="dg-box biz" id="dg-box-biz" data-key="biz">
+      <div class="dg-box-head">
+        <div class="dg-box-ico">🌍</div>
+        <div>
+          <div class="dg-box-title">Business Ethics<br>Outside Stakeholders</div>
+          <div class="dg-box-desc">Customers, suppliers, competitors, society, product, pricing, advertising</div>
+        </div>
+      </div>
+      <div class="dg-arm">👆 Tap here to place</div>
+      <div class="dg-drop" id="dg-drop-biz"></div>
+    </div>
+    <div class="dg-box org" id="dg-box-org" data-key="org">
+      <div class="dg-box-head">
+        <div class="dg-box-ico">🏢</div>
+        <div>
+          <div class="dg-box-title">Organizational Ethics<br>Inside Workplace</div>
+          <div class="dg-box-desc">Employees, managers, company policy, workplace culture, leadership</div>
+        </div>
+      </div>
+      <div class="dg-arm">👆 Tap here to place</div>
+      <div class="dg-drop" id="dg-drop-org"></div>
+    </div>
+  </div>
+
+  <div class="dg-celebrate" id="dg-celebrate">
+    <div class="dg-celebrate-card">
+      <div class="party">🎉</div>
+      <h3>Great work!</h3>
+      <p>You can now <strong>describe the difference</strong> between Business Ethics and Organizational Ethics. 🌟</p>
+    </div>
+  </div>
+
+  <div class="dg-reflect">
+    <div class="rhead"><span style="font-size:1.5rem;">💭</span><h3>Final Reflection</h3></div>
+    <div class="rq">Give one example of <strong>Business Ethics</strong> and one example of <strong>Organizational Ethics</strong> in a real workplace.</div>
+    <textarea class="dg-answer" id="dg-reflect-input" placeholder="Type your two examples here..." oninput="dgSaveReflection()"></textarea>
+    <div class="dg-saved" id="dg-saved">✅ Saved — screenshot this for your submission</div>
+  </div>
+</div>
+</div>
+<!-- ===== END DRAG & DROP ===== -->
+
+<!-- S5: COMPARE HUB -->
+<div class="section" id="s5">
+  <div class="section-header"><div class="section-num">5</div><div class="section-title">Compare: Ethics vs the Rest</div></div>
+  <p class="section-intro">Morality, etiquette, law and religion are all related to ethics — but they are not the same thing. Tap each card to open the comparison.</p>
+  <div class="concept-cards">
+
+    <div class="concept-card morality" onclick="toggleConcept(this)">
+      <div class="cc-top">
+        <div class="cc-icon">💭</div>
+        <div><div class="cc-title">Ethics vs Morality</div><div class="cc-hint">personal belief vs formal standards</div></div>
+        <div class="cc-caret">▾</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-split">
+          <div><div class="cc-lbl" style="color:var(--morality)">Morality</div><p>Personal belief about right and wrong. Differs from person to person. Shaped by culture, religion, family &amp; upbringing.<br><br><em>"I believe lying is wrong"</em></p></div>
+          <div><div class="cc-lbl" style="color:var(--ethics)">Ethics</div><p>Formal principles or standards of right conduct, used in professional or organizational settings. Shaped by codes &amp; policies.<br><br><em>"Employees must not falsify records"</em></p></div>
+        </div>
+        <div class="cc-eg">🎁 A person may believe giving a manager a gift is a normal sign of respect (morality). But in business it can become an ethical issue if the gift influences a decision.</div>
+      </div>
+    </div>
+
+    <div class="concept-card etiquette" onclick="toggleConcept(this)">
+      <div class="cc-top">
+        <div class="cc-icon">🤝</div>
+        <div><div class="cc-title">Ethics vs Etiquette</div><div class="cc-hint">right &amp; wrong vs manners</div></div>
+        <div class="cc-caret">▾</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-split">
+          <div><div class="cc-lbl" style="color:var(--ethics)">Ethics</div><p>Focuses on right and wrong. Usually more serious. Breaking it can <strong>harm</strong> people or the organisation.<br><br><em>e.g. stealing company money</em></p></div>
+          <div><div class="cc-lbl" style="color:var(--etiquette)">Etiquette</div><p>Accepted manners and proper behaviour. Social / workplace expectations. Breaking it causes <strong>discomfort or a poor impression.</strong><br><br><em>e.g. interrupting in a meeting</em></p></div>
+        </div>
+        <div class="cc-eg">⏰ Coming late to a meeting without informing anyone is poor <strong>etiquette</strong>. But falsifying attendance records is an <strong>ethical</strong> issue — it involves dishonesty.</div>
+      </div>
+    </div>
+
+    <div class="concept-card law" onclick="toggleConcept(this)">
+      <div class="cc-top">
+        <div class="cc-icon">⚖️</div>
+        <div><div class="cc-title">Ethics vs Law</div><div class="cc-hint">what we SHOULD do vs what we MUST do</div></div>
+        <div class="cc-caret">▾</div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-split">
+          <div><div class="cc-lbl" style="color:var(--law)">Law</div><p>Formal rules created and enforced by government. Written. Punishment may be fines, court action or imprisonment.<br><br><em>Tells us what we <strong>MUST</strong> do</em></p></div>
+          <div><div class="cc-lbl" style="color:var(--ethics)">Ethics</div><p>About what is right, fair and responsible. Often <em>higher</em> than legal compliance. Some legal acts are still unethical.<br><br><em>Tells us what we <strong>SHOULD</strong> do</em></p></div>
+        </div>
+        <div class="cc-eg">🔑 A business should not only ask <em>"Is this legal?"</em> — it should also ask <em>"Is this right and fair?"</em> &nbsp;See the interactive cases below ⬇️</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LEGAL vs ETHICAL interactive -->
+  <div style="margin-top:18px;">
+    <h3 style="font-size:1rem; font-weight:800; color:var(--gold); margin-bottom:6px;">🔍 Legal ≠ Ethical — tap to reveal</h3>
+    <p style="font-size:0.85rem; color:var(--muted); margin-bottom:12px; line-height:1.6;">Some actions are legal but still unethical. Guess first, then tap each one.</p>
+    <div class="le-list">
+      <div class="le-row" onclick="this.classList.toggle('open')">
+        <div class="le-q">A company uses confusing terms in a contract</div>
+        <div class="le-tap">👆 tap to reveal verdict</div>
+        <div class="le-reveal">
+          <div class="le-badges"><span class="le-badge legal">Maybe legal</span><span class="le-badge unethical">May be unethical</span></div>
+          <div class="le-why">Customers may not fully understand what they are agreeing to.</div>
+        </div>
+      </div>
+      <div class="le-row" onclick="this.classList.toggle('open')">
+        <div class="le-q">An employee shares company secrets</div>
+        <div class="le-tap">👆 tap to reveal verdict</div>
+        <div class="le-reveal">
+          <div class="le-badges"><span class="le-badge illegal">Illegal / against policy</span><span class="le-badge unethical">Unethical</span></div>
+          <div class="le-why">It breaks trust and confidentiality.</div>
+        </div>
+      </div>
+      <div class="le-row" onclick="this.classList.toggle('open')">
+        <div class="le-q">A business raises prices sharply during a shortage</div>
+        <div class="le-tap">👆 tap to reveal verdict</div>
+        <div class="le-reveal">
+          <div class="le-badges"><span class="le-badge legal">May be legal</span><span class="le-badge unethical">May be unethical</span></div>
+          <div class="le-why">It may exploit customers who have no other choice.</div>
+        </div>
+      </div>
+      <div class="le-row" onclick="this.classList.toggle('open')">
+        <div class="le-q">A manager favours a friend for promotion</div>
+        <div class="le-tap">👆 tap to reveal verdict</div>
+        <div class="le-reveal">
+          <div class="le-badges"><span class="le-badge legal">May not be illegal</span><span class="le-badge unethical">Unethical</span></div>
+          <div class="le-why">It is unfair to other employees who deserve a chance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Importance of etiquette -->
+  <div class="info-card" style="margin-top:18px;">
+    <h3>🎩 Why business etiquette matters</h3>
+    <p>Etiquette is the accepted manners and behaviour in a setting. Good etiquette creates a respectful, comfortable working environment.</p>
+    <table class="cmp-table" style="margin-top:8px;">
+      <tr><th>Type</th><th>Example</th></tr>
+      <tr><td>Communication</td><td>Use polite language in email and conversation</td></tr>
+      <tr><td>Meetings</td><td>Be punctual and prepared</td></tr>
+      <tr><td>Phone</td><td>Speak clearly and professionally</td></tr>
+      <tr><td>Customer</td><td>Listen to complaints respectfully</td></tr>
+      <tr><td>Dress</td><td>Dress according to workplace expectations</td></tr>
+      <tr><td>Digital</td><td>Avoid sending rude or careless messages online</td></tr>
+    </table>
+    <p style="margin-top:10px;"><strong>It matters because it:</strong> creates a good first impression, shows respect, reduces conflict, builds confidence, and supports the company image.</p>
+  </div>
+</div>
+
+<!-- S6: PROFESSIONAL CODES -->
+<div class="section" id="s6">
+  <div class="section-header"><div class="section-num">6</div><div class="section-title">Professional Codes</div></div>
+  <p class="section-intro">Professional codes are written guidelines explaining how people in a profession or organisation should behave. They set the standard of expected conduct.</p>
+  <div class="info-card">
+    <h3>Purpose of professional codes</h3>
+    <ul>
+      <li><strong>Guide behaviour</strong> — help employees know what is acceptable</li>
+      <li><strong>Set standards</strong> — explain expected professional conduct</li>
+      <li><strong>Prevent misconduct</strong> — reduce unethical actions</li>
+      <li><strong>Protect stakeholders</strong> — ensure fair treatment for all</li>
+      <li><strong>Support decisions</strong> — help handle difficult situations</li>
+      <li><strong>Build trust</strong> — show the organisation values ethical conduct</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3>Common elements</h3>
+    <table class="cmp-table">
+      <tr><th>Element</th><th>Example</th></tr>
+      <tr><td>Honesty</td><td>Do not falsify records</td></tr>
+      <tr><td>Integrity</td><td>Do the right thing even under pressure</td></tr>
+      <tr><td>Confidentiality</td><td>Do not share customer data</td></tr>
+      <tr><td>Fairness</td><td>Avoid favouritism</td></tr>
+      <tr><td>Respect</td><td>Do not insult colleagues</td></tr>
+      <tr><td>Responsibility</td><td>Admit mistakes and correct them</td></tr>
+      <tr><td>No conflict of interest</td><td>Do not pick a supplier just because they are a relative</td></tr>
+      <tr><td>Compliance</td><td>Follow safety and anti-bribery rules</td></tr>
+    </table>
+  </div>
+  <div class="remember-box">
+    <div class="bulb">🎁</div>
+    <p>A purchasing officer is offered an expensive gift by a supplier <em>before</em> the selection decision. Based on professional ethics, the officer should <strong>reject the gift or report it</strong> — accepting it could create a conflict of interest.</p>
+  </div>
+</div>
+
+<!-- S7: ETHICS & RELIGION -->
+<div class="section" id="s7">
+  <div class="section-header"><div class="section-num">7</div><div class="section-title">Ethics &amp; Religion</div></div>
+  <p class="section-intro">Religion can influence moral values and ethical behaviour. Many religions teach honesty, kindness, fairness, responsibility, respect and compassion.</p>
+  <div class="info-card">
+    <table class="cmp-table">
+      <tr><th>Morality</th><th>Religion</th></tr>
+      <tr><td>Beliefs about right and wrong</td><td>A belief system that may guide moral behaviour</td></tr>
+      <tr><td>Influenced by family, society, culture &amp; religion</td><td>Often provides teachings about good conduct</td></tr>
+      <tr><td>May exist with or without religion</td><td>Often shapes a person's values &amp; responsibilities</td></tr>
+    </table>
+  </div>
+  <div class="def-banner" style="background:linear-gradient(135deg,#0a1a18,#0a1a14); border-color:#1e4a40;">
+    <div class="bulb">🕊️</div>
+    <p style="color:#86d8c8;">In business, employees should respect different beliefs. Ethical behaviour should promote <strong>fairness, respect, responsibility and professionalism for everyone.</strong></p>
+  </div>
+  <div class="info-card">
+    <p>One person may refuse to cheat customers because of religious teaching; another because of personal values or professional ethics. <strong>Both lead to ethical behaviour.</strong></p>
+  </div>
+</div>
+
+<!-- S8: ETHICAL vs UNETHICAL -->
+<div class="section" id="s8">
+  <div class="section-header"><div class="section-num">8</div><div class="section-title">Ethical vs Unethical Behaviour</div></div>
+  <div class="concept-cards" style="margin-bottom:14px;">
+    <div class="concept-card both" onclick="toggleConcept(this)">
+      <div class="cc-top"><div class="cc-icon">✅</div><div><div class="cc-title">Ethical Behaviour</div><div class="cc-hint">tap for examples</div></div><div class="cc-caret">▾</div></div>
+      <div class="cc-body">
+        <div class="cc-eg" style="font-style:normal; opacity:0.95; line-height:1.9;">
+          <strong style="color:var(--both)">Honesty</strong> — reporting actual working hours truthfully<br>
+          <strong style="color:var(--both)">Fairness</strong> — giving equal opportunity to all<br>
+          <strong style="color:var(--both)">Respect</strong> — speaking politely to colleagues<br>
+          <strong style="color:var(--both)">Responsibility</strong> — completing tasks on time<br>
+          <strong style="color:var(--both)">Confidentiality</strong> — protecting company &amp; customer info<br>
+          <strong style="color:var(--both)">Integrity</strong> — refusing to accept bribes<br>
+          <strong style="color:var(--both)">Accountability</strong> — admitting and correcting mistakes
+        </div>
+      </div>
+    </div>
+    <div class="concept-card law" onclick="toggleConcept(this)">
+      <div class="cc-top"><div class="cc-icon">❌</div><div><div class="cc-title">Unethical Behaviour</div><div class="cc-hint">tap for examples</div></div><div class="cc-caret">▾</div></div>
+      <div class="cc-body">
+        <div class="cc-eg" style="font-style:normal; opacity:0.95; line-height:1.9;">
+          <strong style="color:var(--law)">Lying</strong> — giving false information to customers<br>
+          <strong style="color:var(--law)">Cheating</strong> — claiming overtime not worked<br>
+          <strong style="color:var(--law)">Bribery</strong> — accepting money to approve a supplier<br>
+          <strong style="color:var(--law)">Favouritism</strong> — promoting a friend without reason<br>
+          <strong style="color:var(--law)">Discrimination</strong> — unfair treatment of people<br>
+          <strong style="color:var(--law)">Harassment</strong> — making someone feel unsafe<br>
+          <strong style="color:var(--law)">Misuse of property</strong> — using company assets personally<br>
+          <strong style="color:var(--law)">Breach of confidentiality</strong> — sharing private data
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S9: PROFESSIONALISM -->
+<div class="section" id="s9">
+  <div class="section-header"><div class="section-num">9</div><div class="section-title">Ethics + Etiquette + Professionalism</div></div>
+  <p class="section-intro">These three are connected. A professional employee should not only know <em>how to do the job</em> — they should also know <em>how to behave properly.</em></p>
+  <div class="info-card">
+    <table class="cmp-table">
+      <tr><th>Concept</th><th>Focus</th><th>Example</th></tr>
+      <tr><td style="color:var(--ethics); font-weight:800;">Ethics</td><td>Right &amp; wrong conduct</td><td>Do not misuse company funds</td></tr>
+      <tr><td style="color:var(--etiquette); font-weight:800;">Etiquette</td><td>Proper manners &amp; behaviour</td><td>Greet customers politely</td></tr>
+      <tr><td style="color:var(--gold); font-weight:800;">Professionalism</td><td>Responsible, appropriate conduct</td><td>Be punctual, respectful &amp; accountable</td></tr>
+    </table>
+  </div>
+  <div class="def-banner">
+    <div class="bulb">🌟</div>
+    <p>Ethics is doing the <strong>right thing.</strong><br>Etiquette is <strong>behaving properly.</strong><br>Professionalism is showing <strong>both</strong> at work.</p>
+  </div>
+</div>
+
+<!-- SORTER: signature interactive -->
+<div class="section" id="s-sorter">
+  <div class="section-header"><div class="section-num">🧩</div><div class="section-title">Ethics or Etiquette? Sorter</div></div>
+  <p class="section-intro">Read each situation and decide: is it mainly an <strong style="color:var(--ethics)">Ethics</strong> issue, an <strong style="color:var(--etiquette)">Etiquette</strong> issue, or <strong style="color:var(--both)">Both</strong>? Tap your answer — you get one try per scenario.</p>
+  <div class="sorter-wrap">
+    <div class="sorter-score">
+      <span class="ss-label">Your Score</span>
+      <span class="ss-val" id="sorter-score">0 / 8</span>
+    </div>
+    <div id="sorter-cards"></div>
+    <div class="sorter-result" id="sorter-result">
+      <div class="sr-num" id="sorter-final">0 / 8</div>
+      <div class="sr-msg" id="sorter-msg"></div>
+      <button class="retry-btn" onclick="resetSorter()">↻ Try Again</button>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDY -->
+<div class="section" id="s-case">
+  <div class="section-header"><div class="section-num">☕</div><div class="section-title">Case Study: The Customer Complaint</div></div>
+  <div class="case-card">
+    <div class="case-scenario">
+      A customer complains that a product is defective. The staff knows that <strong>the company made a mistake during packaging</strong> — but the manager tells the staff to say that <strong>the customer probably damaged the item.</strong><br><br>
+      What are the ethical issues here, and what should the company actually do?
+    </div>
+    <button class="reveal-btn" onclick="toggleCase(this)">🔍 Reveal the ethical analysis</button>
+    <div class="case-answer" id="case-answer">
+      <div class="info-card" style="margin-top:0;">
+        <h3>⚠️ Ethical issues in the case</h3>
+        <table class="cmp-table">
+          <tr><th>Issue</th><th>Explanation</th></tr>
+          <tr><td>Honesty</td><td>The staff is asked to hide the truth</td></tr>
+          <tr><td>Responsibility</td><td>The company should own its mistake</td></tr>
+          <tr><td>Customer rights</td><td>The customer deserves fair treatment</td></tr>
+          <tr><td>Professional ethics</td><td>Staff should act on company values &amp; ethical standards</td></tr>
+          <tr><td>Reputation</td><td>If the truth comes out, the company loses trust</td></tr>
+        </table>
+      </div>
+      <div class="def-banner" style="margin-bottom:0;">
+        <div class="bulb">✅</div>
+        <p>The right action: <strong>investigate the complaint, admit the mistake if true, apologise professionally, and offer a suitable solution</strong> — replacement, refund or repair.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-section" id="s-quiz">
+  <div class="section-header"><div class="section-num">🧠</div><div class="section-title">Quiz: Chapter 1</div></div>
+  <p class="section-intro">6 questions. Tap an answer to lock it in and see the explanation. Your score appears at the end.</p>
+
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 1 of 6</div>
+    <div class="quiz-q-text">What does <strong>ethics</strong> mean?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q1"></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 2 of 6</div>
+    <div class="quiz-q-text">Which of these is an example of <strong>unethical</strong> workplace behaviour?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q2"></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 3 of 6</div>
+    <div class="quiz-q-text">What is the key difference between <strong>law and ethics</strong>?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q3"></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 4 of 6</div>
+    <div class="quiz-q-text">A purchasing officer is offered an expensive gift by a supplier <em>before</em> choosing the supplier. What is the right action?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q4"></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 5 of 6</div>
+    <div class="quiz-q-text">Which best describes <strong>etiquette</strong>?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q5"></div>
+  </div>
+  <div class="quiz-card">
+    <div class="quiz-q-num">Question 6 of 6</div>
+    <div class="quiz-q-text">Why is <strong>confidentiality</strong> important in the workplace?</div>
+    <div class="quiz-options"></div>
+    <div class="quiz-feedback" id="fb-q6"></div>
+  </div>
+
+  <div class="quiz-score-card" id="score-card">
+    <div class="score-num" id="score-num">0/6</div>
+    <div class="score-label">Your Score</div>
+    <div class="score-msg" id="score-msg"></div>
+    <button class="retry-btn" onclick="retryQuiz()">↻ Try Again</button>
+  </div>
+</div>
+
+<!-- TAKEAWAYS / SUMMARY -->
+<div class="section" id="s-summary">
+  <div class="section-header"><div class="section-num">📌</div><div class="section-title">Key Takeaways</div></div>
+  <div class="takeaway-list">
+    <div class="takeaway-item"><span class="t-icon">✔</span><div>Ethics guides people to make <strong>responsible, fair and honest</strong> decisions in business.</div></div>
+    <div class="takeaway-item"><span class="t-icon">✔</span><div><strong>Business ethics</strong> covers relationships with customers, employees, suppliers, competitors &amp; society; <strong>organizational ethics</strong> focuses on values &amp; culture inside the workplace.</div></div>
+    <div class="takeaway-item"><span class="t-icon">✔</span><div>Morality is <strong>personal belief</strong>, etiquette is <strong>proper behaviour</strong>, law is <strong>official regulation</strong>, and religion may <strong>influence</strong> moral values.</div></div>
+    <div class="takeaway-item"><span class="t-icon">✔</span><div>Ethical behaviour is often <strong>higher</strong> than legal compliance — ask both <em>"Is it legal?"</em> and <em>"Is it right and fair?"</em></div></div>
+    <div class="takeaway-item"><span class="t-icon">✔</span><div><strong>Professional codes</strong> support honesty, fairness, confidentiality, responsibility, respect and integrity.</div></div>
+  </div>
+</div>
+
+<!-- EVIDENCE (MQA SIM) -->
+<div class="section" id="s-evidence" style="background:linear-gradient(135deg,#10101a,#131628);">
+  <div class="section-header"><div class="section-num">📸</div><div class="section-title">Submit Your Evidence</div></div>
+  <p class="section-intro">To complete this SIM activity, submit all three items together in your LMS:</p>
+  <div class="row-list">
+    <div class="row-item"><span class="r-icon">1️⃣</span><div class="r-body"><strong>Sorter result</strong>Screenshot your final Ethics/Etiquette sorter score (aim for 8/8).</div></div>
+    <div class="row-item"><span class="r-icon">2️⃣</span><div class="r-body"><strong>Quiz score</strong>Screenshot your quiz score card with the result message.</div></div>
+    <div class="row-item"><span class="r-icon">3️⃣</span><div class="r-body"><strong>Short reflection</strong>Write 3–4 sentences: one workplace situation where ethics and etiquette differ, and what the right action would be.</div></div>
+  </div>
+  <div class="def-banner" style="margin-top:14px;">
+    📌 <strong style="color:var(--gold)">Note:</strong> All three items must be submitted together as your completed SIM activity evidence for this topic.
+  </div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="section" id="s-glossary">
+  <div class="section-header"><div class="section-num">📚</div><div class="section-title">Glossary / Key Terms</div></div>
+  <p class="section-intro">Tap any term to reveal its meaning.</p>
+  <div id="gloss-list"></div>
+</div>
+
+<!-- REFERENCES -->
+<div class="section" id="s-references" style="border-bottom:none;">
+  <div class="section-header"><div class="section-num">📑</div><div class="section-title">References</div></div>
+  <div class="info-card">
+    <p style="line-height:1.9;">
+      <strong>Business Ethics &amp; Etiquette.</strong> <em>Chapter 1: Ethics — Course Notes.</em><br><br>
+      <strong>Malaysian Qualifications Agency (MQA). (2020).</strong> <em>Code of practice for open and distance learning (ODL).</em> MQA Malaysia. <span style="color:var(--gold);">[SIM requirements and student learning time (SLT) guidelines]</span>
+    </p>
+  </div>
+  <p style="text-align:center; font-size:0.75rem; color:var(--muted); margin-top:16px; line-height:1.6;">
+    Interactive Self-Instructional Material (SIM)<br>Made with care for my students 💛
+  </p>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  style="position:fixed; bottom:24px; right:20px; z-index:999; background:var(--gold); color:#0f1117; border:none; width:50px; height:50px; border-radius:50%; font-size:1.4rem; font-weight:900; cursor:pointer; box-shadow:0 4px 20px rgba(245,200,66,0.4); opacity:0; pointer-events:none; transition:opacity 0.3s ease, transform 0.2s ease; display:flex; align-items:center; justify-content:center;"
+  onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">↑</button>
+
+<script>
+// ========= NAV =========
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  if (event && event.target) event.target.classList.add('active');
+}
+
+// ========= EXPAND TOGGLES =========
+function toggleConcept(el) {
+  el.classList.toggle('open');
+}
+function toggleCase(btn) {
+  const a = document.getElementById('case-answer');
+  a.classList.toggle('open');
+  btn.textContent = a.classList.contains('open') ? '🔼 Hide the analysis' : '🔍 Reveal the ethical analysis';
+}
+function toggleGloss(el) {
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.gloss-item').forEach(g => g.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
+}
+
+// ========= SAFE STORAGE (works on GitHub Pages, degrades gracefully in sandbox) =========
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v === null ? d : v; } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem(k, v); } catch(e){} },
+  del(k){ try { localStorage.removeItem(k); } catch(e){} }
+};
+
+// ========= SORTER (signature interactive) =========
+const sorterData = [
+  { s:'An employee arrives late to a meeting without informing anyone', a:'etiquette', why:'Shows poor professional manners — but no dishonesty.' },
+  { s:'A cashier keeps extra money from a customer', a:'ethics', why:'Dishonest behaviour — clearly a question of right and wrong.' },
+  { s:'A staff member speaks rudely to a customer', a:'both', why:'Poor manners (etiquette) AND unprofessional, disrespectful conduct (ethics).' },
+  { s:'A manager shares employee medical information with others', a:'ethics', why:'Breaks confidentiality — a serious ethical violation.' },
+  { s:'A student sends an email to a lecturer with no greeting or proper subject', a:'etiquette', why:'Poor communication etiquette — impolite, but not dishonest.' },
+  { s:'An employee accepts a gift from a supplier before choosing the supplier', a:'ethics', why:'Possible conflict of interest — it may influence a decision.' },
+  { s:'A company hides product defects from customers', a:'ethics', why:'Dishonest and potentially harmful to customers.' },
+  { s:'A worker repeatedly interrupts others during a discussion', a:'etiquette', why:'Shows disrespect in communication — a manners issue.' }
+];
+let sorterScore = 0, sorterAnswered = 0;
+const labelMap = { ethics:'⚖️ Ethics', etiquette:'🤝 Etiquette', both:'🔵 Both' };
+
+function buildSorter() {
+  sorterScore = 0; sorterAnswered = 0;
+  document.getElementById('sorter-score').textContent = '0 / 8';
+  document.getElementById('sorter-result').classList.remove('show');
+  const wrap = document.getElementById('sorter-cards');
+  wrap.innerHTML = sorterData.map((d, i) => `
+    <div class="sort-card" id="sc-${i}">
+      <div class="sort-scenario">${i+1}. ${d.s}</div>
+      <div class="sort-btns">
+        <button class="sort-btn pick-ethics" onclick="sortAnswer(${i},'ethics',this)">⚖️ Ethics</button>
+        <button class="sort-btn pick-etiquette" onclick="sortAnswer(${i},'etiquette',this)">🤝 Etiquette</button>
+        <button class="sort-btn pick-both" onclick="sortAnswer(${i},'both',this)">🔵 Both</button>
+      </div>
+      <div class="sort-fb" id="sfb-${i}"></div>
+    </div>`).join('');
+}
+
+function sortAnswer(i, pick, btn) {
+  const card = document.getElementById('sc-'+i);
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  const correct = sorterData[i].a;
+  const allBtns = card.querySelectorAll('.sort-btn');
+  allBtns.forEach(b => { b.classList.add('disabled'); b.onclick = null; });
+  const fb = document.getElementById('sfb-'+i);
+  if (pick === correct) {
+    btn.classList.add('correct'); sorterScore++;
+    fb.className = 'sort-fb show correct';
+    fb.innerHTML = `✅ Correct — <strong>${labelMap[correct]}</strong>. ${sorterData[i].why}`;
+  } else {
+    btn.classList.add('wrong');
+    allBtns.forEach(b => { if (b.textContent.toLowerCase().includes(correct === 'both' ? 'both' : correct)) b.classList.add('correct'); });
+    fb.className = 'sort-fb show wrong';
+    fb.innerHTML = `❌ Not quite — the answer is <strong>${labelMap[correct]}</strong>. ${sorterData[i].why}`;
+  }
+  document.getElementById('sorter-score').textContent = `${sorterScore} / 8`;
+  sorterAnswered++;
+  if (sorterAnswered === 8) setTimeout(showSorterResult, 700);
+}
+
+function showSorterResult() {
+  const r = document.getElementById('sorter-result');
+  document.getElementById('sorter-final').textContent = `${sorterScore} / 8`;
+  const msgs = {
+    8: '🎓 Perfect! You can tell ethics from etiquette like a pro.',
+    7: '🌟 Excellent — almost flawless!',
+    6: '👍 Good work — review the ones you missed.',
+    5: '📚 Decent. Re-read the Compare section and try again.',
+    0: '💪 Keep going — revisit Section 5 and the examples, then retry.'
+  };
+  let msg = msgs[sorterScore] || (sorterScore >= 6 ? msgs[6] : msgs[5]);
+  if (sorterScore <= 4) msg = msgs[0];
+  document.getElementById('sorter-msg').textContent = msg;
+  r.classList.add('show');
+  r.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function resetSorter() { buildSorter(); document.getElementById('s-sorter').scrollIntoView({behavior:'smooth'}); }
+
+// ========= QUIZ =========
+const quizDefs = [
+  { q:'q1', answers:[
+    {t:'Formal rules created and enforced by the government', r:'wrong'},
+    {t:'Principles that guide people to decide what is right or wrong', r:'correct'},
+    {t:'Polite manners used when greeting customers', r:'wrong'},
+    {t:'A belief system based only on religion', r:'wrong'}] },
+  { q:'q2', answers:[
+    {t:'Dressing appropriately for work', r:'wrong'},
+    {t:'Being punctual to meetings', r:'wrong'},
+    {t:'Accepting a bribe to approve a supplier', r:'correct'},
+    {t:'Greeting customers politely', r:'wrong'}] },
+  { q:'q3', answers:[
+    {t:'Law and ethics are exactly the same thing', r:'wrong'},
+    {t:'Law tells us what we MUST do; ethics tells us what we SHOULD do', r:'correct'},
+    {t:'Ethics is enforced by the police; law is personal', r:'wrong'},
+    {t:'Anything legal is automatically ethical', r:'wrong'}] },
+  { q:'q4', answers:[
+    {t:'Accept the gift quietly to keep the supplier happy', r:'wrong'},
+    {t:'Reject the gift or report it according to company policy', r:'correct'},
+    {t:'Accept it but choose a different supplier', r:'wrong'},
+    {t:'Share the gift with the whole team', r:'wrong'}] },
+  { q:'q5', answers:[
+    {t:'Serious rules about right and wrong that can harm people if broken', r:'wrong'},
+    {t:'Proper manners and acceptable professional behaviour', r:'correct'},
+    {t:'Official laws enforced by the government', r:'wrong'},
+    {t:'Personal religious beliefs', r:'wrong'}] },
+  { q:'q6', answers:[
+    {t:'It protects private information and maintains trust', r:'correct'},
+    {t:'It increases short-term profit', r:'wrong'},
+    {t:'It allows managers to favour their friends', r:'wrong'},
+    {t:'It is only important by law, not ethics', r:'wrong'}] }
+];
+const feedbacks = {
+  q1:{ correct:'✅ Correct! Ethics = principles that help us decide what is right or wrong, good or bad.', wrong:'❌ Not quite. Ethics is the set of principles that guide right and wrong behaviour — not law, manners, or religion alone.' },
+  q2:{ correct:'✅ Correct! Bribery is dishonest and a clear ethical violation.', wrong:'❌ Not quite. Dressing well, being punctual and greeting politely are good etiquette. Accepting a bribe is the unethical act.' },
+  q3:{ correct:'✅ Correct! Law = what we MUST do (enforced); ethics = what we SHOULD do. Ethics is often higher than the law.', wrong:'❌ Not quite. Law tells us what we MUST do; ethics tells us what we SHOULD do — and something legal can still be unethical.' },
+  q4:{ correct:'✅ Correct! Reject or report it — accepting the gift creates a conflict of interest.', wrong:'❌ Not quite. The professional action is to reject the gift or report it, to avoid a conflict of interest.' },
+  q5:{ correct:'✅ Correct! Etiquette = proper manners and professional behaviour (e.g. greeting politely, being punctual).', wrong:'❌ Not quite. Etiquette is about manners and proper behaviour — ethics is the one about right and wrong.' },
+  q6:{ correct:'✅ Correct! Confidentiality protects private information and maintains trust.', wrong:'❌ Not quite. Confidentiality protects private information and maintains trust — it is not about profit or favouritism.' }
+};
+let quizScore = 0, answered = {};
+
+function buildQuiz() {
+  quizScore = 0; answered = {};
+  document.getElementById('score-card').classList.remove('show');
+  quizDefs.forEach(def => {
+    const group = document.querySelector('#fb-'+def.q).previousElementSibling;
+    group.innerHTML = def.answers.map(a => `<button class="quiz-opt">${a.t}</button>`).join('');
+    const fb = document.getElementById('fb-'+def.q);
+    fb.className = 'quiz-feedback'; fb.textContent = '';
+    def.answers.forEach((a, i) => {
+      const btn = group.children[i];
+      btn.onclick = function(){ answer(this, a.r, def.q); };
+    });
+  });
+}
+function answer(btn, result, qId) {
+  if (answered[qId]) return;
+  answered[qId] = true;
+  btn.closest('.quiz-options').querySelectorAll('.quiz-opt').forEach(o => { o.classList.add('disabled'); o.onclick = null; });
+  btn.classList.add(result);
+  if (result === 'correct') quizScore++;
+  const fb = document.getElementById('fb-'+qId);
+  fb.textContent = feedbacks[qId][result];
+  fb.className = `quiz-feedback show ${result}`;
+  if (Object.keys(answered).length === 6) setTimeout(showScore, 800);
+}
+function showScore() {
+  const card = document.getElementById('score-card');
+  card.classList.add('show');
+  document.getElementById('score-num').textContent = `${quizScore}/6`;
+  const msgs = ['Keep studying — review the notes and try again! 💪','Good effort! Review the sections you missed 📚','Not bad! Almost there 🎯','Great job! You understand business ethics well 🌟','Excellent! Almost perfect! 🏆','Perfect score! You\'re an ethics expert 🎓'];
+  document.getElementById('score-msg').textContent = msgs[quizScore] || msgs[5];
+  card.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function retryQuiz() { buildQuiz(); document.getElementById('s-quiz').scrollIntoView({behavior:'smooth'}); }
+
+// ========= GLOSSARY =========
+const glossary = [
+  ['Ethics','Principles of right and wrong behaviour.'],
+  ['Business ethics','Ethical principles applied in business activities.'],
+  ['Organizational ethics','Ethical values and practices within an organisation.'],
+  ['Morality','Personal belief about right and wrong.'],
+  ['Etiquette','Proper manners and acceptable behaviour.'],
+  ['Law','Formal rules enforced by government.'],
+  ['Professional code','Written guidelines for professional behaviour.'],
+  ['Integrity','Doing the right thing even when no one is watching.'],
+  ['Confidentiality','Keeping private information protected.'],
+  ['Conflict of interest','When personal interest may affect professional judgment.'],
+  ['Accountability','Being responsible for one\'s actions.'],
+  ['Professionalism','Proper, responsible and ethical workplace conduct.']
+];
+function buildGlossary() {
+  document.getElementById('gloss-list').innerHTML = glossary.map(([t,d]) => `
+    <div class="gloss-item" onclick="toggleGloss(this)">
+      <div class="gloss-term"><span class="gloss-abbr">${t}</span><span class="gloss-caret">▾</span></div>
+      <div class="gloss-body"><div class="gloss-def">${d}</div></div>
+    </div>`).join('');
+}
+
+// ========= PROGRESS TRACKER =========
+const PROG_KEY = 'businessEthicsCh1_progress';
+const PROG_SECTIONS = ['s1','s2','s3','s5','s6','s8','s-sorter','s-quiz'];
+let visited = [];
+try { visited = JSON.parse(store.get(PROG_KEY, '[]')); } catch(e) { visited = []; }
+
+function markVisited(id) {
+  if (!visited.includes(id)) {
+    visited.push(id);
+    store.set(PROG_KEY, JSON.stringify(visited));
+    updateProgressUI();
+  }
+}
+function updateProgressUI() {
+  const total = PROG_SECTIONS.length;
+  const done = PROG_SECTIONS.filter(s => visited.includes(s)).length;
+  document.getElementById('prog-fill').style.width = Math.round((done/total)*100) + '%';
+  document.getElementById('prog-count').textContent = `${done} / ${total} sections visited`;
+  PROG_SECTIONS.forEach(s => {
+    const el = document.getElementById('prog-'+s);
+    if (el) el.classList.toggle('done', visited.includes(s));
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting && PROG_SECTIONS.includes(e.target.id)) markVisited(e.target.id); });
+}, { threshold: 0.25 });
+
+// ========= INIT =========
+buildSorter();
+buildQuiz();
+buildGlossary();
+PROG_SECTIONS.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+updateProgressUI();
+
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('back-to-top');
+  btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+  btn.style.pointerEvents = window.scrollY > 300 ? 'all' : 'none';
+});
+
+// ===== EMBEDDED ACTIVITY: PICK A BOX =====
+const PB_CARDS = [
+  {id:0,c:'c1',ico:'🖨️',title:'Printer Problem',concept:'What is Ethics?',scn:'You see your colleague accidentally leave confidential customer information on the printer.',discuss:'What is the right thing to do here — and what makes an action "ethical"?',task:'Type the ethical action you both agreed on.',fb:'Good answer! Ethics is about choosing what is right, fair, honest and responsible.'},
+  {id:1,c:'c2',ico:'🤫',title:'Hidden Complaint',concept:'Business & Organizational Ethics',scn:'A company says it values honesty, but the manager asks staff to hide customer complaints.',discuss:'Does saying "we value honesty" make a company ethical? What should they actually DO?',task:'Type one real action the organisation should take.',fb:'Good answer! Organizational ethics should be shown through real actions, not only company statements.'},
+  {id:2,c:'c3',ico:'🏷️',title:'Fake Product Claim',concept:'Why Ethics Matters in Business',scn:'A business gives false information about a product to increase sales.',discuss:'What could go wrong for this business because of the fake claim?',task:'Type one possible effect of this unethical action.',fb:'Correct! Unethical behaviour can damage trust, reputation and customer loyalty.'},
+  {id:3,c:'c4',ico:'👹',title:'Meeting Monster',concept:'Morality, Ethics & Etiquette',scn:'A staff member talks loudly during a meeting and keeps interrupting others.',discuss:'Is this bad manners, bad ethics, or both? Why?',task:'Type your verdict (ethics, etiquette, or both) and one reason.',fb:'Good thinking! Etiquette is about proper manners and professional behaviour. If the action disrespects others, it may also become an ethical concern.'},
+  {id:4,c:'c5',ico:'📜',title:'Confusing Contract',concept:'Morality & Law',scn:'A company uses confusing words in a contract. It may be legal, but customers do not fully understand what they are signing.',discuss:'Can something be legal but still feel wrong? Why?',task:'Type why something can be legal but still unethical.',fb:'Good answer! Law tells us what we must do, but ethics guides us to do what is right and fair.'},
+  {id:5,c:'c6',ico:'🎁',title:'Supplier Gift',concept:'Professional Codes',scn:'A purchasing officer receives an expensive gift from a supplier before choosing which supplier to approve.',discuss:'Why is this gift a problem? Which workplace rule does it break?',task:'Type the professional code involved and why.',fb:'Correct! This situation involves conflict of interest, honesty, integrity and professional responsibility.'},
+  {id:6,c:'c7',ico:'🕊️',title:'Respect at Work',concept:'Morality & Religion',scn:'Employees in one workplace come from different religious and cultural backgrounds.',discuss:'How do we keep the workplace fair and respectful for everyone?',task:'Type one example of respectful behaviour.',fb:'Good answer! Professional ethics includes respecting different beliefs and treating everyone fairly.'},
+  {id:7,c:'c8',ico:'⏰',title:'Fake Overtime',concept:'Ethical vs Unethical Behaviour',scn:'An employee claims overtime pay even though they did not work overtime.',discuss:'Is this ethical or unethical? What exactly is wrong here?',task:'Type your verdict (ethical or unethical) and one reason.',fb:'Correct! This is unethical because it involves dishonesty and misuse of company resources.'},
+  {id:8,c:'c9',ico:'😠',title:'Angry Customer',concept:'Examples in Workplace',scn:'A customer complains politely, but the staff replies rudely and refuses to help.',discuss:'How should a professional respond, even to a difficult customer?',task:'Type one professional way to respond.',fb:'Good answer! Professional behaviour includes listening, speaking politely and helping customers fairly.'}
+];
+const PB_COLOR = {c1:'#fb923c',c2:'#2dd4bf',c3:'#c084fc',c4:'#60a5fa',c5:'#f87171',c6:'#4ade80',c7:'#38bdf8',c8:'#f472b6',c9:'#facc15'};
+const PB_KEY = 'businessEthicsCh1_box';
+let pbState = {answers:{},reflection:''};
+try { pbState = JSON.parse(store.get(PB_KEY, '{"answers":{},"reflection":""}')); } catch(e){ pbState = {answers:{},reflection:''}; }
+if (!pbState.answers) pbState.answers = {};
+let pbActive = null;
+let pbTimerId = null;
+function pbStartTimer(){
+  const btn = document.getElementById('pb-timer'); if(!btn) return;
+  if(pbTimerId){ clearInterval(pbTimerId); pbTimerId=null; }
+  let s = 120; btn.classList.add('running'); btn.classList.remove('done');
+  const tick=()=>{
+    const m=Math.floor(s/60), ss=String(s%60).padStart(2,'0');
+    btn.textContent = `⏳ ${m}:${ss}`;
+    if(s<=0){ clearInterval(pbTimerId); pbTimerId=null; btn.textContent="⏰ Time's up — write your answer!"; btn.classList.remove('running'); btn.classList.add('done'); }
+    s--;
+  };
+  tick(); pbTimerId=setInterval(tick,1000);
+}
+function pbSave(){ store.set(PB_KEY, JSON.stringify(pbState)); }
+function pbCount(){ return Object.keys(pbState.answers).length; }
+
+function pbBuild(){
+  document.getElementById('pb-cards').innerHTML = PB_CARDS.map(c=>`
+    <div class="pb-box ${c.c} ${pbState.answers[c.id]?'done':''}" id="pb-box-${c.id}" onclick="pbOpen(${c.id})">
+      <span class="bnum">${c.id+1}</span><span class="stamp">✅</span>
+      <span class="ico">${c.ico}</span><span class="bt">${c.title}</span>
+      <span class="bhint">${pbState.answers[c.id]?'completed ✓':'tap to reveal'}</span>
+    </div>`).join('');
+}
+function pbOpen(id){
+  pbActive = id;
+  if(pbTimerId){ clearInterval(pbTimerId); pbTimerId=null; }
+  const c = PB_CARDS[id], saved = pbState.answers[id], done = !!saved;
+  document.getElementById('pb-sheet').innerHTML = `
+    <div class="pb-handle"></div>
+    <div class="pb-head">
+      <div class="pb-ico-big" style="background:${PB_COLOR[c.c]}22;">${c.ico}</div>
+      <div><div class="pb-tag" style="color:${PB_COLOR[c.c]}">Challenge ${id+1} of 9</div>
+      <div class="pb-title" style="color:${PB_COLOR[c.c]}">${c.title}</div></div>
+    </div>
+    <div class="pb-block scn"><div class="blbl">📍 The Situation</div><p>${c.scn}</p></div>
+    <div class="pb-discuss">
+      <div class="pd-head">🗣️ Discuss with your partner for 2 minutes</div>
+      <p class="pd-prompt">${c.discuss}</p>
+      <button class="pd-timer" id="pb-timer" onclick="pbStartTimer()">▶ Start 2:00 timer</button>
+    </div>
+    <div class="pb-block task"><div class="blbl">✍️ Your Pair Answer</div><p>${c.task}</p></div>
+    <textarea class="pb-answer" id="pb-ans" placeholder="Type your pair's answer here...">${saved||''}</textarea>
+    <button class="pb-submit" id="pb-submit" onclick="pbSubmit()" ${done?'style="display:none"':''}>Submit Answer ✨</button>
+    <div class="pb-fb ${done?'show':''}" id="pb-fb">
+      <div class="pb-badge"><div class="big">🌟</div><div class="gj">Good job!</div></div>
+      <div class="pb-fbtext"><div class="flbl">💡 Suggested Feedback</div>${c.fb}</div>
+      <div class="pb-concept">
+        <div class="flbl">🔎 Ethics Concept Revealed</div>
+        <div class="pc-name">${c.concept}</div>
+        <div class="pc-sub">This challenge connects to <strong>${c.concept}</strong>. Find it in the chapter notes to learn more.</div>
+      </div>
+      <div class="pb-actions">
+        <button class="pb-act another" onclick="pbClose()">🔮 Try another challenge</button>
+        <button class="pb-act close" onclick="pbClose()">Done</button>
+      </div>
+    </div>`;
+  document.getElementById('pb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function pbClose(){
+  if(pbTimerId){ clearInterval(pbTimerId); pbTimerId=null; }
+  document.getElementById('pb-overlay').classList.remove('open');
+  document.body.style.overflow = ''; pbActive = null;
+}
+function pbSubmit(){
+  const t = document.getElementById('pb-ans'), val = t.value.trim();
+  if (val.length < 3){ t.style.borderColor='var(--c5)'; t.placeholder='Please type at least a short answer first 🙂'; setTimeout(()=>t.style.borderColor='',1200); return; }
+  pbState.answers[pbActive] = val; pbSave();
+  document.getElementById('pb-box-'+pbActive).classList.add('done');
+  document.getElementById('pb-submit').style.display='none';
+  document.getElementById('pb-fb').classList.add('show');
+  pbUpdate(); pbConfetti();
+}
+function pbUpdate(){
+  const n = pbCount();
+  document.getElementById('pb-count').textContent = n+'/9';
+  document.getElementById('pb-fill').style.width = Math.round(n/9*100)+'%';
+  document.getElementById('pb-celebrate').classList.toggle('show', n>=3);
+}
+function pbSaveReflection(){
+  pbState.reflection = document.getElementById('pb-reflect-input').value; pbSave();
+  document.getElementById('pb-saved').classList.toggle('show', pbState.reflection.trim().length>0);
+}
+function pbReset(){
+  if(!confirm('Reset all your answers for this activity?')) return;
+  pbState = {answers:{},reflection:''}; store.del(PB_KEY);
+  document.getElementById('pb-reflect-input').value=''; document.getElementById('pb-saved').classList.remove('show');
+  pbBuild(); pbUpdate(); document.getElementById('s-box').scrollIntoView({behavior:'smooth'});
+}
+function pbConfetti(){
+  const emojis=['🎉','⭐','✨','🎊','💛','🟢','🔵'], box=document.getElementById('pb-confetti');
+  for(let i=0;i<26;i++){ const e=document.createElement('div'); e.className='conf';
+    e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    e.style.left=Math.random()*100+'vw'; e.style.top='-40px';
+    e.style.animationDuration=(2+Math.random()*2)+'s'; e.style.fontSize=(0.9+Math.random()*1.1)+'rem';
+    box.appendChild(e); setTimeout(()=>e.remove(),4200); }
+}
+pbBuild(); pbUpdate();
+document.getElementById('pb-reflect-input').value = pbState.reflection||'';
+if((pbState.reflection||'').trim().length>0) document.getElementById('pb-saved').classList.add('show');
+
+// ===== EMBEDDED ACTIVITY: DRAG & DROP SORTER =====
+const DG_CARDS = [
+  {id:0,t:'Customers',ico:'🙋',cat:'biz'},
+  {id:1,t:'Suppliers',ico:'📦',cat:'biz'},
+  {id:2,t:'Competitors',ico:'🥊',cat:'biz'},
+  {id:3,t:'Society',ico:'🌍',cat:'biz'},
+  {id:4,t:'Product safety',ico:'🛡️',cat:'biz'},
+  {id:5,t:'Honest advertising',ico:'📢',cat:'biz'},
+  {id:6,t:'Fair pricing',ico:'🏷️',cat:'biz'},
+  {id:7,t:'Customer complaints',ico:'📝',cat:'biz'},
+  {id:8,t:'Supplier relationship',ico:'🤝',cat:'biz'},
+  {id:9,t:'Environmental responsibility',ico:'♻️',cat:'biz'},
+  {id:10,t:'Employees',ico:'👥',cat:'org'},
+  {id:11,t:'Managers',ico:'💼',cat:'org'},
+  {id:12,t:'Workplace culture',ico:'🏢',cat:'org'},
+  {id:13,t:'Company policy',ico:'📋',cat:'org'},
+  {id:14,t:'Leadership behaviour',ico:'🧭',cat:'org'},
+  {id:15,t:'Internal communication',ico:'💬',cat:'org'},
+  {id:16,t:'Fair promotion',ico:'📈',cat:'org'},
+  {id:17,t:'Anti-bribery policy',ico:'🚫',cat:'org'},
+  {id:18,t:'Staff discipline',ico:'⚖️',cat:'org'},
+  {id:19,t:'Confidential employee records',ico:'🔒',cat:'org'}
+];
+const DG_KEY = 'businessEthicsCh1_drag';
+let dgSelected = null, dgPlaced = {}, dgOrder = [];
+let dgRef = ''; try { dgRef = store.get(DG_KEY, ''); } catch(e){ dgRef = ''; }
+
+function dgShuffle(){
+  dgOrder = DG_CARDS.map(c=>c.id);
+  for(let i=dgOrder.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [dgOrder[i],dgOrder[j]]=[dgOrder[j],dgOrder[i]]; }
+}
+function dgRender(){
+  const tray = document.getElementById('dg-tray');
+  const unplaced = dgOrder.filter(id=>!(id in dgPlaced));
+  tray.innerHTML = unplaced.length
+    ? unplaced.map(id=>{ const c=DG_CARDS[id];
+        return `<div class="dg-card ${dgSelected===id?'selected':''}" draggable="true" data-id="${id}" onclick="dgSelect(${id})"><span class="cico">${c.ico}</span>${c.t}</div>`; }).join('')
+    : '<span class="dg-tray-empty">All items sorted! 🎉</span>';
+  ['biz','org'].forEach(k=>{
+    const drop=document.getElementById('dg-drop-'+k);
+    const items=Object.keys(dgPlaced).filter(id=>dgPlaced[id]===k).map(id=>DG_CARDS[id]);
+    drop.innerHTML = items.length
+      ? items.map(c=>`<div class="dg-card placed"><span class="cico">${c.ico}</span>${c.t}</div>`).join('')
+      : '<span class="dg-drop-empty">drop or tap items here</span>';
+  });
+  tray.querySelectorAll('.dg-card').forEach(el=>{
+    el.addEventListener('dragstart', e=>{ e.dataTransfer.setData('text/plain', el.dataset.id); e.dataTransfer.effectAllowed='move'; });
+  });
+  dgUpdateScore(); dgUpdateSelUI();
+}
+function dgSelect(id){ dgSelected = (dgSelected===id ? null : id); dgRender(); }
+function dgUpdateSelUI(){
+  const banner=document.getElementById('dg-selbanner');
+  const biz=document.getElementById('dg-box-biz'), org=document.getElementById('dg-box-org');
+  if(dgSelected!=null){
+    const c=DG_CARDS[dgSelected];
+    banner.innerHTML = `✋ Selected: ${c.ico} <span style="color:var(--text)">${c.t}</span> — now tap a box 👇<span class="clr" onclick="dgClearSel(event)">cancel</span>`;
+    banner.classList.add('show'); biz.classList.add('armed'); org.classList.add('armed');
+  } else {
+    banner.classList.remove('show'); biz.classList.remove('armed'); org.classList.remove('armed');
+  }
+}
+function dgClearSel(e){ if(e) e.stopPropagation(); dgSelected=null; dgRender(); }
+function dgDropOn(key){
+  if(dgSelected==null){ dgFeedback('👆 First tap an item above, then tap a box.', false); return; }
+  const id=dgSelected; dgSelected=null; dgPlace(id,key);
+}
+function dgPlace(id,key){
+  if(id in dgPlaced){ dgRender(); return; }
+  const c=DG_CARDS[id], box=document.getElementById('dg-box-'+key);
+  if(c.cat===key){
+    dgPlaced[id]=key; dgFeedback('✅ Correct! This belongs here.', true); dgRender();
+    if(Object.keys(dgPlaced).length===DG_CARDS.length) dgComplete();
+  } else {
+    dgFeedback('❌ Try again. Ask yourself: is this about outside stakeholders or inside workplace behaviour?', false);
+    box.classList.add('shake'); setTimeout(()=>box.classList.remove('shake'),420);
+    dgRender();
+  }
+}
+function dgFeedback(msg, ok){ const f=document.getElementById('dg-feedback'); f.textContent=msg; f.className='dg-feedback '+(ok?'ok':'no'); }
+function dgUpdateScore(){
+  const n=Object.keys(dgPlaced).length;
+  document.getElementById('dg-count').textContent=n+'/20';
+  document.getElementById('dg-fill').style.width=Math.round(n/20*100)+'%';
+}
+function dgComplete(){
+  document.getElementById('dg-celebrate').classList.add('show');
+  dgFeedback('All sorted correctly! 🌟', true);
+  pbConfetti();
+  document.getElementById('dg-celebrate').scrollIntoView({behavior:'smooth', block:'center'});
+}
+function dgReset(){
+  dgPlaced={}; dgSelected=null;
+  document.getElementById('dg-celebrate').classList.remove('show');
+  dgShuffle(); dgRender();
+  const f=document.getElementById('dg-feedback'); f.textContent='Pick an item to begin 👇'; f.className='dg-feedback';
+  document.getElementById('s-drag').scrollIntoView({behavior:'smooth'});
+}
+function dgSaveReflection(){
+  const v=document.getElementById('dg-reflect-input').value;
+  try{ store.set(DG_KEY, v); }catch(e){}
+  document.getElementById('dg-saved').classList.toggle('show', v.trim().length>0);
+}
+['biz','org'].forEach(key=>{
+  const box=document.getElementById('dg-box-'+key);
+  box.addEventListener('click', ()=>dgDropOn(key));
+  box.addEventListener('dragover', e=>{ e.preventDefault(); box.classList.add('over'); });
+  box.addEventListener('dragleave', ()=>box.classList.remove('over'));
+  box.addEventListener('drop', e=>{ e.preventDefault(); box.classList.remove('over'); const id=parseInt(e.dataTransfer.getData('text/plain')); if(!isNaN(id)) dgPlace(id,key); });
+});
+dgShuffle(); dgRender();
+document.getElementById('dg-reflect-input').value = dgRef||'';
+if((dgRef||'').trim().length>0) document.getElementById('dg-saved').classList.add('show');
+</script>
+</body>
+</html>
